@@ -98,7 +98,11 @@
       .mcc-scaler-inner { transform: scale(0.55); width: 900px; margin-bottom: -405px; }
     }
     @media (max-width: 480px) {
+      .mcc-scaler { padding: 0 !important; }
       .mcc-scaler-inner { transform: scale(0.42); width: 900px; margin-bottom: -522px; }
+    }
+    @media (max-width: 390px) {
+      .mcc-scaler-inner { transform: scale(0.38); width: 900px; margin-bottom: -558px; }
     }
 
     /* === FEATURE CALLOUT GRID: mobile stacking === */
@@ -1189,14 +1193,13 @@
 
       </div><!-- /mcc-frame --></div><!-- /gradient border --></div><!-- /frame wrap -->
     </div><!-- /mcc-scaler-inner -->
-      <div style="text-align:center;margin-top:1.75rem;display:flex;align-items:center;justify-content:center;">
-        <div style="display:inline-flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:600;letter-spacing:.06em;border:1px solid rgba(250,204,21,.3);padding:.55rem 1.4rem;border-radius:30px;background:rgba(250,204,21,.07);box-shadow:0 0 24px rgba(250,204,21,.1),0 0 60px rgba(250,204,21,.04);backdrop-filter:blur(8px);">
-          <span style="width:8px;height:8px;background:#facc15;border-radius:50%;display:inline-block;box-shadow:0 0 8px #facc15,0 0 16px rgba(250,204,21,.4);animation:mcc-pulse 1.8s infinite;flex-shrink:0;"></span>
-          <span style="background:linear-gradient(90deg,#facc15,#fde68a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Interactive replica</span>
-          <span style="color:rgba(250,204,21,.35);">·</span>
-          <span style="color:rgba(247,243,236,.45);font-weight:500;">data anonymized</span>
-
-        </div>
+    </div><!-- /mcc-scaler -->
+    <div style="text-align:center;margin-top:1.75rem;display:flex;align-items:center;justify-content:center;">
+      <div style="display:inline-flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:600;letter-spacing:.06em;border:1px solid rgba(250,204,21,.3);padding:.55rem 1.4rem;border-radius:30px;background:rgba(250,204,21,.07);box-shadow:0 0 24px rgba(250,204,21,.1),0 0 60px rgba(250,204,21,.04);backdrop-filter:blur(8px);">
+        <span style="width:8px;height:8px;background:#facc15;border-radius:50%;display:inline-block;box-shadow:0 0 8px #facc15,0 0 16px rgba(250,204,21,.4);animation:mcc-pulse 1.8s infinite;flex-shrink:0;"></span>
+        <span style="background:linear-gradient(90deg,#facc15,#fde68a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Interactive replica</span>
+        <span style="color:rgba(250,204,21,.35);">·</span>
+        <span style="color:rgba(247,243,236,.45);font-weight:500;">data anonymized</span>
       </div>
     </div>
 
@@ -1450,4 +1453,22 @@
     <div class="closing-inner">
       <h2>LET'S<br><span>TALK.</span></h2>
       <p class="closing-quote">The projects I enjoy most usually begin with someone saying, &ldquo;We&rsquo;ve never done this before.&rdquo;</p>
- 
+      <p class="closing-sub">If you&rsquo;re building a marketing function that needs to move fast and prove impact, let&rsquo;s talk.</p>
+      <div class="btn-group">
+        <a href="mailto:jrudnicki13@gmail.com" class="btn">Get in Touch</a>
+        <button class="btn btn--ghost copy-email-btn" data-email="jrudnicki13@gmail.com">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-right:.3rem;"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M3 11H2a1 1 0 01-1-1V2a1 1 0 011-1h8a1 1 0 011 1v1"/></svg>
+          Copy Email
+        </button>
+        <a href="https://www.linkedin.com/in/jessrudnicki" target="_blank" class="btn btn--ghost">LinkedIn</a>
+        <a href="images/Jessica_Rudnicki_Resume_2026.pdf" target="_blank" rel="noopener" class="btn btn--ghost">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-right:.3rem;"><path d="M3 13h10M8 2v8M5 7l3 3 3-3"/></svg>
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
