@@ -230,26 +230,14 @@ document.querySelectorAll('.testimonial-carousel').forEach(function(carousel) {
 });
 
 /* ── MAGNETIC BUTTON EFFECT ──────────────────── */
-document.querySelectorAll('.btn').forEach(function(btn) {
+document.querySelectorAll('.btn, .nav-cta').forEach(function(btn) {
   btn.addEventListener('mousemove', function(e) {
     const rect = btn.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width  / 2;
     const y = e.clientY - rect.top  - rect.height / 2;
-    const strength = 0.3;
-    btn.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
-    // Radial glow follows cursor
-    const px = ((e.clientX - rect.left) / rect.width)  * 100;
-    const py = ((e.clientY - rect.top)  / rect.height) * 100;
-    if (!btn.classList.contains('btn--ghost')) {
-      btn.style.backgroundImage =
-        `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,.22) 0%, transparent 65%),
-         linear-gradient(135deg, var(--accent), var(--gold))`;
-    }
+    btn.style.transform = 'translate(' + (x * 0.3) + 'px, ' + (y * 0.3) + 'px)';
   });
   btn.addEventListener('mouseleave', function() {
     btn.style.transform = '';
-    if (!btn.classList.contains('btn--ghost')) {
-      btn.style.backgroundImage = '';
-    }
   });
 });
