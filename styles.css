@@ -1618,6 +1618,9 @@ html.page-ready { opacity: 1; }
   /* ── ABOUT PILLARS: stack on mobile ── */
   .about-pillars { grid-template-columns: 1fr; gap: .75rem; }
   .about-pull-quote { padding-left: 1rem; }
+
+  /* ── NAV CARDS: stack on mobile ── */
+  .nav-cards { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: 1fr 1fr; }
