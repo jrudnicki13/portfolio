@@ -244,3 +244,36 @@ document.querySelectorAll('.testimonial-carousel').forEach(function(carousel) {
   goTo(0);
   start();
 });
+
+/* ── MAGNETIC BUTTON EFFECT ──────────────────── */
+(function() {
+  // Only on non-touch devices
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  var STRENGTH = 0.38; // how far the button follows the cursor (0–1)
+  var EASE_IN  = 'transform 0.12s ease';
+  var EASE_OUT = 'transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.2s';
+
+  function attachMagnet(btn) {
+    btn.addEventListener('mouseenter', function() {
+      btn.style.transition = EASE_IN;
+    });
+
+    btn.addEventListener('mousemove', function(e) {
+      var rect = btn.getBoundingClientRect();
+      var cx   = rect.left + rect.width  / 2;
+      var cy   = rect.top  + rect.height / 2;
+      var dx   = (e.clientX - cx) * STRENGTH;
+      var dy   = (e.clientY - cy) * STRENGTH;
+      btn.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+    });
+
+    btn.addEventListener('mouseleave', function() {
+      btn.style.transition = EASE_OUT;
+      btn.style.transform  = '';
+    });
+  }
+
+  // Primary solid buttons + nav CTA
+  document.querySelectorAll('.btn:not(.btn--ghost), .nav-cta').forEach(attachMagnet);
+})();

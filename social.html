@@ -155,6 +155,172 @@
     </div>
   </section>
 
+  <!-- SOCIAL SHOWCASE -->
+  <section class="section section--dark">
+    <div class="section-inner">
+      <div class="s-label">In Practice</div>
+      <h2 class="section-title fade-in">From strategy<br>to screen.</h2>
+      <p class="body-text fade-in delay-1" style="color:rgba(247,243,236,.62);max-width:52ch;margin-bottom:3.5rem;">Every post below started with a goal. Here's what end-to-end social execution looks like — copy, design, and strategy all in one.</p>
+
+      <!-- LinkedIn: Syspro posts -->
+      <div class="s-label" style="margin-bottom:1.5rem;">LinkedIn &middot; Syspro</div>
+      <div class="phone-gallery" style="display:flex;gap:2rem;justify-content:center;overflow-x:auto;padding-bottom:1.5rem;margin-bottom:3.5rem;">
+
+        <!-- Post 1: Rebrand celebration -->
+        <div class="phone-wrap fade-in" style="flex-shrink:0;width:240px;">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="images/social-syspro-rebrand.jpg" alt="Syspro LinkedIn post: rebrand launch celebration"
+                onerror="this.parentElement.innerHTML='<div class=\'phone-placeholder\'>social-syspro-rebrand.jpg</div>'">
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <p class="phone-caption">Rebrand Launch &middot; Brand Celebration</p>
+        </div>
+
+        <!-- Post 2: Marketplace -->
+        <div class="phone-wrap fade-in delay-1" style="flex-shrink:0;width:240px;">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="images/social-syspro-marketplace.jpg" alt="Syspro LinkedIn post: Marketplace launch"
+                onerror="this.parentElement.innerHTML='<div class=\'phone-placeholder\'>social-syspro-marketplace.jpg</div>'">
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <p class="phone-caption">Syspro Marketplace &middot; Thought Leadership</p>
+        </div>
+
+        <!-- Post 3: NAM Executive Edge -->
+        <div class="phone-wrap fade-in delay-2" style="flex-shrink:0;width:240px;">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="images/social-syspro-nam.jpg" alt="Syspro LinkedIn post: NAM Executive Edge sponsorship"
+                onerror="this.parentElement.innerHTML='<div class=\'phone-placeholder\'>social-syspro-nam.jpg</div>'">
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <p class="phone-caption">NAM Executive Edge &middot; Event Sponsorship</p>
+        </div>
+
+      </div>
+
+      <!-- Instagram grids -->
+      <div class="s-label" style="margin-bottom:1.5rem;">Instagram &middot; Brand Grids</div>
+      <div class="phone-gallery" style="display:flex;gap:3rem;justify-content:center;overflow-x:auto;padding-bottom:1.5rem;">
+
+        <!-- BTBIT grid -->
+        <div class="phone-wrap fade-in" style="flex-shrink:0;width:280px;">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen phone-screen--scroll">
+              <img src="images/social-btbit-grid.jpg" alt="Back To Business I.T. Instagram grid"
+                onerror="this.parentElement.innerHTML='<div class=\'phone-placeholder\'>social-btbit-grid.jpg</div>'">
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <p class="phone-caption">@backtobusinessit &middot; Built from scratch</p>
+        </div>
+
+        <!-- GTG grid -->
+        <div class="phone-wrap fade-in delay-1" style="flex-shrink:0;width:280px;">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen phone-screen--scroll">
+              <img src="images/social-gtg-grid.jpg" alt="The Greentree Group Instagram grid"
+                onerror="this.parentElement.innerHTML='<div class=\'phone-placeholder\'>social-gtg-grid.jpg</div>'">
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <p class="phone-caption">@greentreegroup &middot; Content strategy &amp; design</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Phone mockup styles (scoped inline) -->
+    <style>
+      .phone-mockup {
+        background: #111214;
+        border-radius: 38px;
+        padding: 14px 8px 18px;
+        box-shadow:
+          0 40px 80px rgba(0,0,0,.55),
+          0 0 0 1px rgba(255,255,255,.1),
+          inset 0 0 0 1px rgba(255,255,255,.04),
+          0 2px 6px rgba(0,0,0,.6);
+        position: relative;
+      }
+      .phone-notch {
+        width: 72px; height: 22px;
+        background: #111214;
+        border-radius: 0 0 16px 16px;
+        margin: 0 auto 6px;
+        display: flex; align-items: center; justify-content: center;
+        gap: 6px;
+      }
+      .phone-notch::before {
+        content: '';
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.12);
+      }
+      .phone-notch::after {
+        content: '';
+        width: 32px; height: 5px;
+        border-radius: 3px;
+        background: rgba(255,255,255,.1);
+      }
+      .phone-screen {
+        border-radius: 26px;
+        overflow: hidden;
+        background: #1a1a1c;
+        line-height: 0;
+      }
+      .phone-screen img { width: 100%; display: block; }
+      .phone-screen--scroll {
+        max-height: 520px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        cursor: ns-resize;
+      }
+      .phone-screen--scroll::-webkit-scrollbar { width: 3px; }
+      .phone-screen--scroll::-webkit-scrollbar-track { background: transparent; }
+      .phone-screen--scroll::-webkit-scrollbar-thumb { background: rgba(150,178,82,.4); border-radius: 3px; }
+      .phone-home {
+        width: 80px; height: 4px;
+        background: rgba(255,255,255,.18);
+        border-radius: 2px;
+        margin: 10px auto 0;
+      }
+      .phone-caption {
+        font-family: 'Inter', sans-serif;
+        font-size: .68rem;
+        color: rgba(247,243,236,.4);
+        text-align: center;
+        margin-top: .85rem;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+      }
+      .phone-placeholder {
+        padding: 2.5rem 1rem;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-size: .65rem;
+        color: rgba(150,178,82,.5);
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        min-height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </section>
+
+
   <!-- WHAT I'VE LED -->
   <section class="section section--surface">
     <div class="section-inner">
