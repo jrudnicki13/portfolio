@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Marketing Command Center: Jessica Rudnicki. Building the future of marketing operations through AI-powered workflows, automation, and intelligent systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jrudnicki13.github.io/portfolio/ai.html">
+  <meta property="og:title" content="AI Innovation | Jessica Rudnicki">
+  <meta property="og:description" content="Building the future of marketing operations through AI-powered workflows, automation, and intelligent systems.">
+  <meta property="og:image" content="https://jrudnicki13.github.io/portfolio/images/og-preview.jpg">
+  <meta property="og:site_name" content="Jessica Rudnicki">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Innovation | Jessica Rudnicki">
+  <meta name="twitter:description" content="Building the future of marketing operations through AI-powered workflows, automation, and intelligent systems.">
+  <meta name="twitter:image" content="https://jrudnicki13.github.io/portfolio/images/og-preview.jpg">
+  <link rel="canonical" href="https://jrudnicki13.github.io/portfolio/ai.html">
+  <title>AI Innovation | Jessica Rudnicki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* AI page accent overrides */
+    .ai-tag {
+      display: inline-block;
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(150,178,82,.4);
+      padding: .25rem .6rem;
+      margin-bottom: 1rem;
+    }
+    .ai-stat {
+      padding: 1.75rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      text-align: center;
+    }
+    .ai-stat-num {
+      font-family: var(--display);
+      font-size: 2.5rem;
+      color: var(--accent);
+      line-height: 1;
+      display: block;
+      margin-bottom: .35rem;
+    }
+    .ai-stat-label {
+      font-size: .72rem;
+      color: rgba(247,243,236,.5);
+      letter-spacing: .06em;
+      line-height: 1.4;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+    .differentiator {
+      padding: 2rem;
+      border-left: 2px solid var(--accent);
+      margin-bottom: 1.5rem;
+      background: rgba(255,255,255,.03);
+    }
+    .differentiator h4 {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      letter-spacing: .04em;
+      color: var(--black);
+      margin-bottom: .5rem;
+    }
+    .differentiator p {
+      font-size: .85rem;
+      color: rgba(12,12,14,.62);
+      line-height: 1.65;
+    }
+    @media (max-width: 720px) {
+      .why-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* ── MCC REPLICA: scale down on mobile ── */
+    .mcc-scaler {
+      width: 100%;
+      /* No overflow:hidden — JS handles margin dynamically per-screen height.
+         Section wrapper already clips horizontal overflow. */
+      padding-top: 28px; /* room for floating stat badges at top:-18px */
+    }
+    .mcc-scaler-inner {
+      transform-origin: top left;
+      width: 900px;
+      margin: 0 auto; /* center on desktop */
+    }
+    /* On mobile: scale + translateX to keep centered.
+       Formula: translateX(50vw - (900 * scale / 2)px)
+       margin-bottom is set dynamically by JS to match actual screen height. */
+    @media (max-width: 880px) {
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 337.5px)) scale(0.75); }
+    }
+    @media (max-width: 680px) {
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 247.5px)) scale(0.55); }
+    }
+    @media (max-width: 480px) {
+      .mcc-scaler { padding: 28px 0 0 !important; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 189px)) scale(0.42); }
+    }
+    @media (max-width: 390px) {
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 171px)) scale(0.38); }
+    }
+
+    /* === FEATURE CALLOUT GRID: mobile stacking === */
+    .feature-callout-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+    }
+    @media (max-width: 768px) {
+      .feature-callout-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .feature-callout-grid { grid-template-columns: 1fr; }
+    }
+
+    /* === AI PAGE GRADIENT THEME: blue → teal → lime === */
+    .nav-links a.active,
+    .nav-mobile a.active {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .page-hero .ph-label {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      border-left-color: #3B82F6 !important;
+    }
+    .s-label {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .s-label::before {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16) !important;
+    }
+    .ai-tag {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      border-color: rgba(59,130,246,.4) !important;
+    }
+    .ai-stat-num {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .differentiator {
+      border-left-color: #3B82F6 !important;
+    }
+    .stats-bar {
+      background: radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px), linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #84cc16 100%) !important;
+      background-size: 26px 26px, auto !important;
+    }
+    .stat-number {
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: var(--white) !important;
+      background-clip: unset !important;
+      color: var(--white) !important;
+    }
+    .identity-box strong {
+      background: linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/headshot.jpg" alt="Jessica Rudnicki" class="nav-avatar">Jessica <span>Rudnicki</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="brand.html">Brand Strategy</a>
+        <a href="content.html">Content</a>
+        <a href="email.html">Email Marketing</a>
+        <a href="social.html">Social Media</a>
+        <a href="landing-pages.html">Landing Pages</a>
+        <a href="ai.html" class="active">AI Innovation</a>
+      </div>
+      <a href="mailto:jrudnicki13@gmail.com" class="nav-cta">Get in Touch</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="brand.html">Brand Strategy</a>
+    <a href="content.html">Content</a>
+    <a href="email.html">Email Marketing</a>
+    <a href="social.html">Social Media</a>
+    <a href="landing-pages.html">Landing Pages</a>
+    <a href="ai.html" class="active">AI Innovation</a>
+    <a href="mailto:jrudnicki13@gmail.com">Get in Touch</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="min-height: 60vh;">
+    <div class="inner">
+      <div class="ph-label">06 / AI Innovation</div>
+      <h1>AI MARKETING<br><span style="background:linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">COMMAND</span><br>CENTER.</h1>
+      <p class="ph-sub">I built something I wish I'd always had: a single, intelligent workspace where the entire marketing operation lives, with AI as a true strategic partner, not just a writing tool.</p>
+    </div>
+  </section>
+
+  <!-- WHY I BUILT IT -->
+  <section class="section section--white">
+    <div class="section-inner">
+      <div class="s-label">The Origin</div>
+      <div class="intro-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+        <div class="fade-in">
+          <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">Why I built it.</h2>
+          <p class="body-text" style="margin-top: 1rem;">I've always believed marketers should spend less time managing work and more time creating value. Most marketing teams spend enormous energy on coordination: tracking campaigns, chasing updates, moving data between tools, writing reports nobody reads, and sitting in meetings that could have been a dashboard.</p>
+          <p class="body-text" style="margin-top: 1rem;">As AI continued to evolve, I challenged myself to imagine what marketing could look like if planning, reporting, collaboration, content development, and execution all lived in one intelligent workspace. So I started building it.</p>
+        </div>
+        <div class="fade-in delay-1">
+          <div class="identity-box" style="margin-top: 0;">
+            <p style="font-size: 1.05rem; line-height: 1.75;">&ldquo;I don&rsquo;t believe AI will replace marketers. I believe it will <strong>amplify marketers who know how to use it strategically.</strong> This project is my proof of concept.&rdquo;</p>
+          </div>
+          <p class="body-text" style="margin-top: 2rem;">At Syspro, I introduced AI-powered workflows and operational systems that improved planning, reporting, content development, campaign execution, and team productivity, contributing to $15.5M+ in marketing-sourced pipeline and $6M+ in closed-won revenue.</p>
+          <p class="body-text" style="margin-top: 1rem;">The command center takes that thinking further and builds it into a permanent system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark mcc-showcase-wrap" style="padding: 5rem 0 6rem; overflow: hidden; background: #060b14; position: relative;">
+    <!-- animated orbs -->
+    <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+      <div style="position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(150,178,82,.07) 0%,transparent 65%);top:-200px;right:-150px;animation:orb-drift-a 10s ease-in-out infinite;"></div>
+      <div style="position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%);bottom:-100px;left:-100px;animation:orb-drift-b 13s ease-in-out infinite;"></div>
+      <div style="position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(6,182,212,.05) 0%,transparent 65%);top:40%;left:45%;animation:orb-drift-a 8s ease-in-out infinite reverse;"></div>
+      <!-- dot grid -->
+      <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:28px 28px;"></div>
+      <!-- top vignette -->
+      <div style="position:absolute;top:0;left:0;right:0;height:120px;background:linear-gradient(to bottom,#060b14,transparent);"></div>
+    </div>
+    <div class="section-inner" style="max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 3rem;">
+      <div style="display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1.1rem .45rem .85rem;border-radius:100px;background:linear-gradient(135deg,rgba(150,178,82,.15),rgba(6,182,212,.12));border:1px solid rgba(150,178,82,.45);box-shadow:0 0 18px rgba(150,178,82,.18),0 0 40px rgba(6,182,212,.08);margin-bottom:1.75rem;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z" fill="url(#bolt-grad)" stroke="url(#bolt-grad)" stroke-width=".5" stroke-linejoin="round"/><defs><linearGradient id="bolt-grad" x1="4" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#96B252"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+        <span style="font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(90deg,#96B252,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Built with Claude Code</span>
+      </div>
+      <h2 class="section-title fade-in" style="margin-bottom: 1.25rem;">One Stack.<br>Every Channel.<br><span style="background:linear-gradient(90deg, #3B82F6, #06B6D4, #84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Zero Silos.</span></h2>
+      <p class="body-intro fade-in" style="max-width: 620px; margin-bottom: 0; color: rgba(247,243,236,.65);">A fully custom marketing ops platform: campaigns, calendar, editorial, social, paid, events, and leads in one place, with an AI agent that knows all of it. Built from scratch using Claude Code.</p>
+    </div>
+
+    <!-- Tab nav -->
+    <div class="section-inner" style="max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 1.25rem;">
+      <div class="mcc-tabs" style="display:flex;gap:.4rem;flex-wrap:wrap;padding:.9rem 0 1rem;border-bottom:none;margin-bottom:.75rem;">
+        <button class="mcc-tab-btn mcc-active" onclick="mccSwitch(this,'mcc-s-dashboard')">Dashboard</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-kpis')">KPIs</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-calendar')">Master Calendar</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-strategy')">Agentic Strategy</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-campaigns')">Campaigns</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-social')">Social Media</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-paid')">Paid Placements</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-leads')">Leads</button>
+        <button class="mcc-tab-btn" onclick="mccSwitch(this,'mcc-s-truepro')">Live Intelligence</button>
+      </div>
+    </div>
+
+    <!-- Browser frame -->
+    <div class="mcc-scaler" style="max-width:1180px;margin:0 auto;padding:28px 2rem 0;"><div class="mcc-scaler-inner">
+      <!-- floating stat badges -->
+      <div style="position:relative;">
+        <div style="position:absolute;top:-18px;right:0;display:flex;gap:.6rem;z-index:10;">
+          <div style="background:rgba(150,178,82,.12);border:1px solid rgba(150,178,82,.35);backdrop-filter:blur(8px);border-radius:8px;padding:.35rem .7rem;display:flex;align-items:center;gap:.4rem;box-shadow:0 0 20px rgba(150,178,82,.12);">
+            <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="#96B252" stroke-width="2"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg>
+            <span style="font-size:.55rem;font-weight:700;color:#96B252;">218 MQLs</span><span style="font-size:.45rem;color:rgba(150,178,82,.6);">this quarter</span>
+          </div>
+          <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);backdrop-filter:blur(8px);border-radius:8px;padding:.35rem .7rem;display:flex;align-items:center;gap:.4rem;box-shadow:0 0 20px rgba(6,182,212,.1);">
+            <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 5px #22c55e;animation:mcc-pulse 1.5s infinite;flex-shrink:0;"></span>
+            <span style="font-size:.55rem;font-weight:700;color:#06b6d4;">Live</span><span style="font-size:.45rem;color:rgba(6,182,212,.6);">10 campaigns running</span>
+          </div>
+        </div>
+        <!-- gradient border wrapper -->
+        <div style="padding:1.5px;border-radius:13px;background:linear-gradient(135deg,rgba(150,178,82,.5) 0%,rgba(59,130,246,.4) 40%,rgba(6,182,212,.5) 100%);box-shadow:0 0 0 1px rgba(255,255,255,.04),0 50px 120px rgba(0,0,0,.8),0 0 60px rgba(59,130,246,.15),0 0 100px rgba(6,182,212,.08);">
+        <div class="mcc-frame" style="border:none;border-radius:12px;box-shadow:none;animation:none;">
+        <!-- chrome bar -->
+        <div class="mcc-chrome-bar">
+          <span class="mcc-dot" style="background:#ff5f57"></span>
+          <span class="mcc-dot" style="background:#febc2e"></span>
+          <span class="mcc-dot" style="background:#28c840"></span>
+          <div class="mcc-url-pill" id="mcc-url-display">mcc.internal / dashboard</div>
+        </div>
+
+        <!-- ── SCREEN: DASHBOARD ── -->
+        <div class="mcc-screen" id="mcc-s-dashboard">
+          <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem;"><div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;">ADMIN</div><div style="font-size:.45rem;color:rgba(255,255,255,.35);cursor:pointer;">Sign out</div></div>
+            </div>
+          </div>
+          <div class="mcc-main-area">
+            <!-- Team presence bar -->
+            <div style="padding:.5rem 1.25rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;">
+              <div style="display:flex;align-items:center;gap:.4rem;">
+                <span style="font-size:.5rem;color:rgba(255,255,255,.4);letter-spacing:.08em;">TEAM ONLINE</span>
+                <div style="display:flex;gap:-.2rem;">
+                  <div style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.45rem;color:#fff;font-weight:700;border:1.5px solid #0f172a;">JR</div>
+                  <div style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:.45rem;color:#fff;font-weight:700;border:1.5px solid #0f172a;margin-left:-5px;">SC</div>
+                  <div style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#fde68a);display:flex;align-items:center;justify-content:center;font-size:.45rem;color:#fff;font-weight:700;border:1.5px solid #0f172a;margin-left:-5px;">RK</div>
+                  <div style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:.45rem;color:#fff;font-weight:700;border:1.5px solid #0f172a;margin-left:-5px;">TM</div>
+                </div>
+                <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 5px #22c55e;animation:mcc-pulse 1.5s infinite;"></span>
+                <span style="font-size:.48rem;color:#22c55e;">4 online</span>
+              </div>
+              <button class="mcc-report-btn" style="font-size:.5rem;padding:.25rem .7rem;">✉ Weekly DG Report</button>
+            </div>
+            <div class="mcc-top-bar" style="padding:.75rem 1.25rem 0;">
+              <div style="display:flex;align-items:center;gap:.75rem;">
+                <div class="mcc-sparkle">✦</div>
+                <div>
+                  <div style="font-size:1rem;font-weight:700;background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Good evening, Jessica</div>
+                  <div style="font-size:.55rem;color:rgba(255,255,255,.45);">Saturday, 20 June 2026 · Overview across all channels</div>
+                </div>
+              </div>
+            </div>
+            <!-- stat cards -->
+            <div class="mcc-stat-grid" style="padding:.75rem 1.25rem;">
+              <div class="mcc-stat-card"><div class="mcc-stat-label" style="color:#3b82f6;">● CAMPAIGNS</div><div class="mcc-stat-num" style="color:#3b82f6;">12</div><div class="mcc-stat-sub">4 launching this week</div><div class="mcc-stat-bar"><div style="width:47%;background:#3b82f6;"></div></div></div>
+              <div class="mcc-stat-card"><div class="mcc-stat-label" style="color:#0d9488;">● SOCIAL</div><div class="mcc-stat-num" style="color:#0d9488;">9</div><div class="mcc-stat-sub">Posts queued this week</div><div class="mcc-stat-bar"><div style="width:60%;background:#0d9488;"></div></div></div>
+              <div class="mcc-stat-card"><div class="mcc-stat-label" style="color:#059669;">● EDITORIAL</div><div class="mcc-stat-num" style="color:#059669;">15</div><div class="mcc-stat-sub">3 in final review</div><div class="mcc-stat-bar"><div style="width:75%;background:#059669;"></div></div></div>
+              <div class="mcc-stat-card" style="border-color:#f59e0b;"><div class="mcc-stat-label" style="color:#d97706;">● PAID</div><div class="mcc-stat-num" style="color:#d97706;">8</div><div class="mcc-stat-sub">7 missing tracking URLs</div><div class="mcc-stat-bar"><div style="width:42%;background:#d97706;"></div></div></div>
+              <div class="mcc-stat-card"><div class="mcc-stat-label" style="color:#f59e0b;">● EVENTS</div><div class="mcc-stat-num" style="color:#f59e0b;">19</div><div class="mcc-stat-sub">2 confirmed this month</div><div class="mcc-stat-bar"><div style="width:80%;background:#f59e0b;"></div></div></div>
+            </div>
+            <!-- 2x2 panels -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem;padding:0 1.25rem .75rem;">
+              <!-- Campaigns panel -->
+              <div class="mcc-panel" style="margin:0;">
+                <div class="mcc-panel-header"><span style="font-weight:700;color:rgba(247,243,236,.9);font-size:.65rem;">Campaigns</span><span style="font-size:.55rem;color:rgba(247,243,236,.35);">12 active · 6 planning</span><span class="mcc-view-all" style="font-size:.5rem;">View all →</span></div>
+                <div style="display:flex;gap:.35rem;margin-bottom:.5rem;flex-wrap:wrap;">
+                  <span class="mcc-badge mcc-badge-gray" style="font-size:.44rem;">● Planning 6</span>
+                  <span class="mcc-badge mcc-badge-blue" style="font-size:.44rem;">● Active 12</span>
+                  <span class="mcc-badge mcc-badge-green" style="font-size:.44rem;">● Complete 11</span>
+                </div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;color:rgba(247,243,236,.75);"><span>Enterprise Growth Campaign</span><div class="mcc-prog-wrap"><div class="mcc-prog-bar" style="width:5%;background:#3b82f6;"></div></div></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;color:rgba(247,243,236,.75);"><span>Partner Launch Series</span><div class="mcc-prog-wrap"><div class="mcc-prog-bar" style="width:53%;background:linear-gradient(90deg,#3b82f6,#0d9488);"></div></div></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;color:rgba(247,243,236,.75);"><span>Platform Awareness</span><div class="mcc-prog-wrap"><div class="mcc-prog-bar" style="width:91%;background:linear-gradient(90deg,#3b82f6,#0d9488);"></div></div></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;color:rgba(247,243,236,.75);"><span>Q3 Product Launch</span><div class="mcc-prog-wrap"><div class="mcc-prog-bar" style="width:12%;background:#3b82f6;"></div></div></div>
+                <div class="mcc-campaign-row" style="border:none;font-size:.55rem;color:rgba(247,243,236,.75);"><span>Trade Show Series</span><div class="mcc-prog-wrap"><div class="mcc-prog-bar" style="width:71%;background:linear-gradient(90deg,#3b82f6,#0d9488);"></div></div></div>
+              </div>
+              <!-- Social panel -->
+              <div class="mcc-panel" style="margin:0;">
+                <div class="mcc-panel-header"><span style="font-weight:700;color:rgba(247,243,236,.9);font-size:.65rem;">Social Media</span><span style="font-size:.55rem;color:rgba(247,243,236,.35);">9 queued this week</span><span class="mcc-view-all" style="font-size:.5rem;">View all →</span></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;align-items:flex-start;flex-direction:column;gap:.15rem;padding:.3rem 0;">
+                  <div style="display:flex;gap:.35rem;align-items:center;"><span style="background:#0d9488;color:#fff;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;font-weight:700;">LI</span><span style="font-weight:600;color:rgba(247,243,236,.85);">Mon 23 Jun · Campaign post</span></div>
+                  <span style="color:rgba(247,243,236,.45);font-size:.52rem;">How enterprises are scaling revenue without adding headcount</span>
+                </div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;align-items:flex-start;flex-direction:column;gap:.15rem;padding:.3rem 0;">
+                  <div style="display:flex;gap:.35rem;align-items:center;"><span style="background:#1d4ed8;color:#fff;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;font-weight:700;">LI</span><span style="font-weight:600;color:rgba(247,243,236,.85);">Tue 24 Jun · Thought leadership</span></div>
+                  <span style="color:rgba(247,243,236,.45);font-size:.52rem;">5 signs your tech stack is slowing your growth</span>
+                </div>
+                <div class="mcc-campaign-row" style="border:none;font-size:.55rem;align-items:flex-start;flex-direction:column;gap:.15rem;padding:.3rem 0;">
+                  <div style="display:flex;gap:.35rem;align-items:center;"><span style="background:#0891b2;color:#fff;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;font-weight:700;">TW</span><span style="font-weight:600;color:rgba(247,243,236,.85);">Wed 25 Jun · Event promo</span></div>
+                  <span style="color:rgba(247,243,236,.45);font-size:.52rem;">Product Summit 2026 — last chance to register</span>
+                </div>
+              </div>
+              <!-- Editorial panel -->
+              <div class="mcc-panel" style="margin:0;">
+                <div class="mcc-panel-header"><span style="font-weight:700;color:rgba(247,243,236,.9);font-size:.65rem;">Editorial</span><span style="font-size:.55rem;color:rgba(247,243,236,.35);">15 in pipeline</span><span class="mcc-view-all" style="font-size:.5rem;">View all →</span></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;justify-content:space-between;"><span>Platform Advantage: 5 Signs You Need a Change</span><span class="mcc-badge mcc-badge-blue" style="font-size:.42rem;">In Review</span></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;justify-content:space-between;"><span>Lean Growth: What SaaS Teams Get Wrong</span><span class="mcc-badge mcc-badge-gray" style="font-size:.42rem;">Draft</span></div>
+                <div class="mcc-campaign-row" style="font-size:.55rem;justify-content:space-between;"><span>Customer Success: Northgate Technologies</span><span class="mcc-badge mcc-badge-green" style="font-size:.42rem;">Live</span></div>
+                <div class="mcc-campaign-row" style="border:none;font-size:.55rem;justify-content:space-between;"><span>AI in SaaS: 2026 State of Automation Report</span><span class="mcc-badge mcc-badge-gray" style="font-size:.42rem;">Planned</span></div>
+              </div>
+              <!-- Paid + Events panel -->
+              <div style="display:flex;flex-direction:column;gap:.65rem;">
+                <div class="mcc-panel" style="margin:0;flex:1;">
+                  <div class="mcc-panel-header"><span style="font-weight:700;color:rgba(247,243,236,.9);font-size:.65rem;">Paid Media</span><span style="font-size:.55rem;color:rgba(247,243,236,.35);">8 active</span><span class="mcc-view-all" style="font-size:.5rem;">View all →</span></div>
+                  <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:5px;padding:.3rem .55rem;font-size:.48rem;color:#fbbf24;margin-bottom:.4rem;">⚠ 7 placements missing tracking URLs</div>
+                  <div class="mcc-campaign-row" style="font-size:.52rem;justify-content:space-between;border:none;"><span style="color:rgba(247,243,236,.8);">Tech Insider · EMEA</span><span style="color:#f59e0b;">Missing UTM</span></div>
+                </div>
+                <div class="mcc-panel" style="margin:0;flex:1;">
+                  <div class="mcc-panel-header"><span style="font-weight:700;color:rgba(247,243,236,.9);font-size:.65rem;">Events</span><span style="font-size:.55rem;color:rgba(247,243,236,.35);">19 upcoming</span><span class="mcc-view-all" style="font-size:.5rem;">View all →</span></div>
+                  <div class="mcc-campaign-row" style="font-size:.52rem;justify-content:space-between;"><span style="color:rgba(247,243,236,.8);">Product Demo Day</span><span style="color:rgba(247,243,236,.4);">25 Jun</span></div>
+                  <div class="mcc-campaign-row" style="border:none;font-size:.52rem;justify-content:space-between;"><span style="color:rgba(247,243,236,.8);">Analyst Briefing Manchester</span><span style="color:rgba(247,243,236,.4);">23 Jun</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: KPIS ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-kpis">
+          <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem;"><div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;">ADMIN</div><div style="font-size:.45rem;color:rgba(255,255,255,.35);cursor:pointer;">Sign out</div></div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:.85rem 1.5rem;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:1rem;font-weight:700;color:rgba(247,243,236,.9);">KPIs &amp; Measurement</span>
+              <button class="mcc-report-btn" style="font-size:.5rem;">✦ Export report</button>
+            </div>
+            <!-- Summary bar -->
+            <div style="padding:.65rem 1.5rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:1.25rem;">
+              <div style="display:flex;align-items:center;gap:.35rem;"><span style="width:8px;height:8px;background:#22c55e;border-radius:50%;"></span><span style="font-size:.58rem;font-weight:600;color:#4ade80;">3 of 6 on track</span></div>
+              <div style="display:flex;align-items:center;gap:.35rem;"><span style="width:8px;height:8px;background:#ef4444;border-radius:50%;"></span><span style="font-size:.58rem;font-weight:600;color:#f87171;">1 at risk</span></div>
+              <div style="display:flex;align-items:center;gap:.35rem;"><span style="width:8px;height:8px;background:#94a3b8;border-radius:50%;"></span><span style="font-size:.58rem;font-weight:600;color:rgba(247,243,236,.45);">2 not started</span></div>
+              <div style="flex:1;background:rgba(255,255,255,.1);border-radius:4px;height:8px;overflow:hidden;margin-left:.5rem;"><div style="width:50%;height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);border-radius:4px;"></div></div>
+              <span style="font-size:.55rem;color:rgba(247,243,236,.45);white-space:nowrap;">50% overall</span>
+            </div>
+            <div style="padding:.75rem 1.5rem;overflow-y:auto;">
+              <!-- KPI Group 1 -->
+              <div style="background:linear-gradient(135deg,#1d3a8a,#1e3a5f);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;display:flex;align-items:center;justify-content:space-between;">
+                <div style="display:flex;align-items:center;gap:.85rem;">
+                  <div style="font-size:1.6rem;font-weight:800;color:#93c5fd;line-height:1;">35%</div>
+                  <div><div style="font-size:.7rem;font-weight:700;color:#fff;">Growth Pipeline Creation</div><div style="font-size:.52rem;color:rgba(255,255,255,.55);margin-top:.15rem;">New logo pipeline sourced and influenced by marketing</div></div>
+                </div>
+                <div style="text-align:right;"><div style="font-size:.5rem;color:rgba(255,255,255,.45);">weighting</div><div style="font-size:.55rem;font-weight:700;color:#93c5fd;">0/1 on track</div></div>
+              </div>
+              <!-- KPI rows group 1 -->
+              <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;margin-bottom:.85rem;">
+                <div style="display:grid;grid-template-columns:1fr auto auto auto auto;gap:.5rem;align-items:center;padding:.55rem .85rem;border-bottom:1px solid rgba(255,255,255,.07);">
+                  <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:7px;height:7px;background:#22c55e;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.58rem;font-weight:600;color:rgba(247,243,236,.9);">Marketing influenced pipeline</span></div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">TARGET</div>$12M</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">DUE</div>Jun 30</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">OWNER</div>Jessica R.</div>
+                  <span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.45rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;white-space:nowrap;">On Track</span>
+                </div>
+                <div style="padding:.3rem .85rem;background:rgba(255,255,255,.02);"><div style="background:rgba(255,255,255,.1);border-radius:4px;height:4px;"><div style="width:68%;height:100%;background:#22c55e;border-radius:4px;"></div></div><div style="display:flex;justify-content:space-between;margin-top:.2rem;"><span style="font-size:.45rem;color:rgba(247,243,236,.35);">$8.2M current</span><span style="font-size:.45rem;color:rgba(247,243,236,.35);">68%</span></div></div>
+                <div style="display:grid;grid-template-columns:1fr auto auto auto auto;gap:.5rem;align-items:center;padding:.55rem .85rem;border-bottom:1px solid rgba(255,255,255,.07);">
+                  <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:7px;height:7px;background:#ef4444;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.58rem;font-weight:600;color:rgba(247,243,236,.9);">New logo pipeline from campaigns</span></div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">TARGET</div>$4M</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">DUE</div>Jun 30</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">OWNER</div>Sam C.</div>
+                  <span style="background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.3);font-size:.45rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;white-space:nowrap;">At Risk</span>
+                </div>
+                <div style="padding:.3rem .85rem;background:rgba(255,255,255,.02);"><div style="background:rgba(255,255,255,.1);border-radius:4px;height:4px;"><div style="width:31%;height:100%;background:#ef4444;border-radius:4px;"></div></div><div style="display:flex;justify-content:space-between;margin-top:.2rem;"><span style="font-size:.45rem;color:rgba(247,243,236,.35);">$1.24M current</span><span style="font-size:.45rem;color:rgba(247,243,236,.35);">31%</span></div></div>
+              </div>
+              <!-- KPI Group 2 -->
+              <div style="background:linear-gradient(135deg,#0a4a44,#0a2f3d);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;display:flex;align-items:center;justify-content:space-between;">
+                <div style="display:flex;align-items:center;gap:.85rem;">
+                  <div style="font-size:1.6rem;font-weight:800;color:#99f6e4;line-height:1;">15%</div>
+                  <div><div style="font-size:.7rem;font-weight:700;color:#fff;">Pipeline Quality</div><div style="font-size:.52rem;color:rgba(255,255,255,.55);margin-top:.15rem;">Lead quality, conversion rates, and sales acceptance</div></div>
+                </div>
+                <div style="text-align:right;"><div style="font-size:.5rem;color:rgba(255,255,255,.45);">weighting</div><div style="font-size:.55rem;font-weight:700;color:#99f6e4;">1/2 on track</div></div>
+              </div>
+              <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;margin-bottom:.85rem;">
+                <div style="display:grid;grid-template-columns:1fr auto auto auto auto;gap:.5rem;align-items:center;padding:.55rem .85rem;border-bottom:1px solid rgba(255,255,255,.07);">
+                  <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:7px;height:7px;background:#22c55e;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.58rem;font-weight:600;color:rgba(247,243,236,.9);">MAL to MQL conversion rate</span></div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">TARGET</div>70%</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">DUE</div>Ongoing</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">OWNER</div>Jessica R.</div>
+                  <span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.45rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;white-space:nowrap;">On Track</span>
+                </div>
+                <div style="padding:.3rem .85rem;background:rgba(255,255,255,.02);"><div style="background:rgba(255,255,255,.1);border-radius:4px;height:4px;"><div style="width:74%;height:100%;background:#22c55e;border-radius:4px;"></div></div><div style="display:flex;justify-content:space-between;margin-top:.2rem;"><span style="font-size:.45rem;color:rgba(247,243,236,.35);">74% current</span><span style="font-size:.45rem;color:rgba(247,243,236,.35);">74%</span></div></div>
+                <div style="display:grid;grid-template-columns:1fr auto auto auto auto;gap:.5rem;align-items:center;padding:.55rem .85rem;">
+                  <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:7px;height:7px;background:#94a3b8;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.58rem;font-weight:600;color:rgba(247,243,236,.9);">MQL to SQL handoff rate</span></div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">TARGET</div>90%</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">DUE</div>Q3 2026</div>
+                  <div style="font-size:.5rem;color:rgba(247,243,236,.45);text-align:right;"><div style="color:rgba(247,243,236,.3);font-size:.44rem;">OWNER</div>R. Kim</div>
+                  <span style="background:rgba(148,163,184,.12);color:#94a3b8;border:1px solid rgba(148,163,184,.2);font-size:.45rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;white-space:nowrap;">Planned</span>
+                </div>
+                <div style="padding:.3rem .85rem;background:rgba(255,255,255,.02);"><div style="background:rgba(255,255,255,.1);border-radius:4px;height:4px;"><div style="width:0%;height:100%;background:#94a3b8;border-radius:4px;"></div></div><div style="display:flex;justify-content:space-between;margin-top:.2rem;"><span style="font-size:.45rem;color:rgba(247,243,236,.35);">Not started</span><span style="font-size:.45rem;color:rgba(247,243,236,.35);">0%</span></div></div>
+              </div>
+              <!-- KPI Group 3 -->
+              <div style="background:linear-gradient(135deg,#4c1d95,#3730a3);border-radius:10px;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;">
+                <div style="display:flex;align-items:center;gap:.85rem;">
+                  <div style="font-size:1.6rem;font-weight:800;color:#ddd6fe;line-height:1;">10%</div>
+                  <div><div style="font-size:.7rem;font-weight:700;color:#fff;">Digital Conversion Performance</div><div style="font-size:.52rem;color:rgba(255,255,255,.55);margin-top:.15rem;">Website conversion, landing page effectiveness, paid ROI</div></div>
+                </div>
+                <div style="text-align:right;"><div style="font-size:.5rem;color:rgba(255,255,255,.45);">weighting</div><div style="font-size:.55rem;font-weight:700;color:#ddd6fe;">0/1 not started</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: CAMPAIGNS ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-campaigns">
+          <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem;"><div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;">ADMIN</div><div style="font-size:.45rem;color:rgba(255,255,255,.35);cursor:pointer;">Sign out</div></div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:.85rem 1.5rem;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:1rem;font-weight:700;color:rgba(247,243,236,.9);">Campaigns</span>
+              <div style="display:flex;gap:.5rem;align-items:center;">
+                <button class="mcc-view-toggle mcc-vt-active">Cards</button>
+                <button class="mcc-view-toggle">List</button>
+                <button style="background:#3b82f6;color:#fff;border:none;padding:.3rem .75rem;border-radius:6px;font-size:.6rem;font-weight:700;cursor:pointer;">+ Add Campaign</button>
+              </div>
+            </div>
+            <!-- filter row -->
+            <div style="padding:.5rem 1.5rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;">
+              <input type="text" placeholder="🔍 Search campaigns..." style="font-size:.55rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.25rem .5rem;color:rgba(247,243,236,.8);background:rgba(255,255,255,.06);width:120px;" disabled>
+              <select style="font-size:.52rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.25rem .45rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Verticals</option></select>
+              <select style="font-size:.52rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.25rem .45rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Types</option></select>
+              <select style="font-size:.52rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.25rem .45rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Stages</option></select>
+              <select style="font-size:.52rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.25rem .45rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Statuses</option></select>
+              <button style="font-size:.5rem;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);padding:.25rem .5rem;border-radius:5px;color:rgba(247,243,236,.5);cursor:pointer;">↺ Refresh</button>
+            </div>
+            <!-- donut charts row -->
+            <div style="display:flex;gap:.75rem;padding:.85rem 1.5rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY STATUS</div><svg viewBox="0 0 80 80" width="68" height="68"><circle cx="40" cy="40" r="28" fill="none" stroke="#e2e8f0" stroke-width="10"/><circle cx="40" cy="40" r="28" fill="none" stroke="#22c55e" stroke-width="10" stroke-dasharray="66 110" stroke-dashoffset="-20" stroke-linecap="round"/><circle cx="40" cy="40" r="28" fill="none" stroke="#3b82f6" stroke-width="10" stroke-dasharray="22 154" stroke-dashoffset="46" stroke-linecap="round"/><text x="40" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">31</text></svg><div style="font-size:.45rem;color:#64748b;text-align:center;margin-top:.2rem;">total</div></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY TYPE</div><svg viewBox="0 0 80 80" width="68" height="68"><circle cx="40" cy="40" r="28" fill="none" stroke="#e2e8f0" stroke-width="10"/><circle cx="40" cy="40" r="28" fill="none" stroke="#6366f1" stroke-width="10" stroke-dasharray="88 88" stroke-dashoffset="-20" stroke-linecap="round"/><circle cx="40" cy="40" r="28" fill="none" stroke="#f59e0b" stroke-width="10" stroke-dasharray="40 136" stroke-dashoffset="68" stroke-linecap="round"/><text x="40" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">31</text></svg><div style="font-size:.45rem;color:#64748b;text-align:center;margin-top:.2rem;">total</div></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY FUNNEL STAGE</div><svg viewBox="0 0 80 80" width="68" height="68"><circle cx="40" cy="40" r="28" fill="none" stroke="#e2e8f0" stroke-width="10"/><circle cx="40" cy="40" r="28" fill="none" stroke="#0d9488" stroke-width="10" stroke-dasharray="105 71" stroke-dashoffset="-20" stroke-linecap="round"/><circle cx="40" cy="40" r="28" fill="none" stroke="#3b82f6" stroke-width="10" stroke-dasharray="60 116" stroke-dashoffset="85" stroke-linecap="round"/><text x="40" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">29</text></svg><div style="font-size:.45rem;color:#64748b;text-align:center;margin-top:.2rem;">total</div></div>
+              <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:.3rem;padding:.25rem 0 .25rem .5rem;border-left:1px solid #e2e8f0;">
+                <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:8px;height:8px;background:#22c55e;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.52rem;color:rgba(247,243,236,.5);">Active <strong style="color:rgba(247,243,236,.85);">12</strong></span></div>
+                <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:8px;height:8px;background:#3b82f6;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.52rem;color:rgba(247,243,236,.5);">Planning <strong style="color:rgba(247,243,236,.85);">6</strong></span></div>
+                <div style="display:flex;align-items:center;gap:.4rem;"><span style="width:8px;height:8px;background:#94a3b8;border-radius:50%;flex-shrink:0;"></span><span style="font-size:.52rem;color:rgba(247,243,236,.5);">Complete <strong style="color:rgba(247,243,236,.85);">13</strong></span></div>
+              </div>
+            </div>
+            <!-- campaign cards -->
+            <div style="padding:.6rem 1.5rem;">
+              <div style="font-size:.58rem;font-weight:700;color:rgba(247,243,236,.5);margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem;"><span>∨ ACTIVE</span><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:.1rem .4rem;border-radius:10px;font-size:.5rem;">12</span></div>
+              <div style="display:flex;gap:.65rem;overflow-x:auto;padding-bottom:.5rem;">
+                <!-- Card 1 -->
+                <div class="mcc-camp-card" style="min-width:188px;max-width:188px;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);">
+                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.35rem;">
+                    <span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.45rem;font-weight:700;padding:.2rem .45rem;border-radius:4px;">Active</span>
+                    <div style="display:flex;gap:-.2rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;border:1.5px solid #fff;">JR</div><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;border:1.5px solid #fff;margin-left:-5px;">SC</div></div>
+                  </div>
+                  <div style="font-size:.65rem;font-weight:700;color:rgba(247,243,236,.9);margin-bottom:.25rem;line-height:1.3;">Enterprise Growth Campaign</div>
+                  <div style="display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.35rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">NEW LOGO</span><span style="background:rgba(34,197,94,.15);color:#4ade80;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">TOFU</span></div>
+                  <div style="font-size:.5rem;color:#94a3b8;margin-bottom:.3rem;">LAUNCH Apr · ENDS Jul 2026</div>
+                  <div style="font-size:.52rem;color:rgba(247,243,236,.5);line-height:1.5;margin-bottom:.4rem;">Target enterprises evaluating platforms for the first time.</div>
+                  <div class="mcc-prog-wrap" style="margin-bottom:.3rem;"><div class="mcc-prog-bar" style="width:5%;background:#3b82f6;height:4px;"></div></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.45rem;color:#94a3b8;">18 deliverables · 1 live</span><a style="font-size:.44rem;color:#3b82f6;text-decoration:none;">↗ HubSpot</a></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="mcc-camp-card" style="min-width:188px;max-width:188px;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);">
+                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.35rem;">
+                    <span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.45rem;font-weight:700;padding:.2rem .45rem;border-radius:4px;">Active</span>
+                    <div style="display:flex;gap:-.2rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#fde68a);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;border:1.5px solid #fff;">RK</div></div>
+                  </div>
+                  <div style="font-size:.65rem;font-weight:700;color:rgba(247,243,236,.9);margin-bottom:.25rem;line-height:1.3;">Case Study: Northgate Technologies</div>
+                  <div style="display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.35rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">NEW LOGO</span><span style="background:rgba(245,158,11,.2);color:#fbbf24;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">BOFU</span></div>
+                  <div style="font-size:.5rem;color:#94a3b8;margin-bottom:.3rem;">LAUNCH May · ENDS Jul 2026</div>
+                  <div style="font-size:.52rem;color:rgba(247,243,236,.5);line-height:1.5;margin-bottom:.4rem;">How Northgate Technologies tripled output without adding headcount.</div>
+                  <div class="mcc-prog-wrap" style="margin-bottom:.3rem;"><div class="mcc-prog-bar" style="width:53%;background:linear-gradient(90deg,#3b82f6,#0d9488);height:4px;"></div></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.45rem;color:#94a3b8;">19 deliverables · 10 live</span><a style="font-size:.44rem;color:#3b82f6;text-decoration:none;">↗ HubSpot</a></div>
+                </div>
+                <!-- Card 3 -->
+                <div class="mcc-camp-card" style="min-width:188px;max-width:188px;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);">
+                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.35rem;">
+                    <span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.45rem;font-weight:700;padding:.2rem .45rem;border-radius:4px;">Active</span>
+                    <div style="display:flex;gap:-.2rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;border:1.5px solid #fff;">JR</div></div>
+                  </div>
+                  <div style="font-size:.65rem;font-weight:700;color:rgba(247,243,236,.9);margin-bottom:.25rem;line-height:1.3;">Platform Awareness Campaign</div>
+                  <div style="display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.35rem;"><span style="background:rgba(167,139,250,.15);color:#c4b5fd;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">CUSTOMER</span><span style="background:rgba(34,197,94,.15);color:#4ade80;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">TOFU</span></div>
+                  <div style="font-size:.5rem;color:#94a3b8;margin-bottom:.3rem;">LAUNCH Jun · ENDS Jul 2026</div>
+                  <div style="font-size:.52rem;color:rgba(247,243,236,.5);line-height:1.5;margin-bottom:.4rem;">Position Marketplace as a strategic growth engine for customers.</div>
+                  <div class="mcc-prog-wrap" style="margin-bottom:.3rem;"><div class="mcc-prog-bar" style="width:91%;background:linear-gradient(90deg,#3b82f6,#0d9488);height:4px;"></div></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.45rem;color:#94a3b8;">11 deliverables · 10 live</span><a style="font-size:.44rem;color:#3b82f6;text-decoration:none;">↗ HubSpot</a></div>
+                </div>
+                <!-- Card 4 -->
+                <div class="mcc-camp-card" style="min-width:188px;max-width:188px;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);">
+                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.35rem;">
+                    <span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.45rem;font-weight:700;padding:.2rem .45rem;border-radius:4px;">Active</span>
+                    <div style="display:flex;gap:-.2rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;border:1.5px solid #fff;">TM</div></div>
+                  </div>
+                  <div style="font-size:.65rem;font-weight:700;color:rgba(247,243,236,.9);margin-bottom:.25rem;line-height:1.3;">Trade Show Series (Always On)</div>
+                  <div style="display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.35rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">NEW LOGO</span><span style="background:rgba(245,158,11,.2);color:#fbbf24;font-size:.42rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;">MOFU</span></div>
+                  <div style="font-size:.5rem;color:#94a3b8;margin-bottom:.3rem;">LAUNCH Q1 · ENDS Q4 2026</div>
+                  <div style="font-size:.52rem;color:rgba(247,243,236,.5);line-height:1.5;margin-bottom:.4rem;">Event-based lead generation across EMEA and Americas.</div>
+                  <div class="mcc-prog-wrap" style="margin-bottom:.3rem;"><div class="mcc-prog-bar" style="width:71%;background:linear-gradient(90deg,#3b82f6,#0d9488);height:4px;"></div></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.45rem;color:#94a3b8;">7 deliverables · 5 live</span><a style="font-size:.44rem;color:#3b82f6;text-decoration:none;">↗ HubSpot</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: CALENDAR ── -->        <!-- ── SCREEN: CALENDAR ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-calendar">
+                    <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;margin-top:.2rem;">ADMIN</div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);">
+              <span style="font-size:1rem;font-weight:700;color:rgba(247,243,236,.9);">Master Calendar</span>
+              <button class="mcc-report-btn" style="font-size:.55rem;">✦ Summarize</button>
+            </div>
+            <div style="padding:.75rem 1.5rem;display:flex;gap:1rem;font-size:.55rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <span style="color:#3b82f6;">● Campaign</span><span style="color:rgba(247,243,236,.7);">● Event</span><span style="color:#0d9488;">● Social</span><span style="color:#059669;">● Blog</span><span style="color:#d97706;">● Paid</span>
+            </div>
+            <div style="padding:.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:#0d1526;">
+              <button class="mcc-nav-arrow">← Prev</button>
+              <span style="font-weight:700;font-size:.8rem;color:rgba(247,243,236,.9);">June 2026</span>
+              <button class="mcc-nav-arrow">Next →</button>
+            </div>
+            <div class="mcc-cal-grid">
+              <div class="mcc-cal-head">MON</div><div class="mcc-cal-head">TUE</div><div class="mcc-cal-head">WED</div><div class="mcc-cal-head">THU</div><div class="mcc-cal-head">FRI</div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">1</div><div class="mcc-cal-evt" style="background:#3b82f6;">Platform Awareness Campaign</div><div class="mcc-cal-evt" style="background:#1e293b;">Partner Summit 2026</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">2</div><div class="mcc-cal-evt" style="background:#059669;">Thought Leadership Article</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">3</div><div class="mcc-cal-evt" style="background:#1e293b;">Product Demo Day</div><div class="mcc-cal-evt" style="background:#0d9488;">Event Promo Post</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">4</div><div class="mcc-cal-evt" style="background:#3b82f6;">Financial Services Campaign</div><div class="mcc-cal-evt" style="background:#059669;">Brightfield Inc Case Study</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">5</div><div class="mcc-cal-evt" style="background:#059669;">Customer Success Video</div><div class="mcc-cal-evt" style="background:#d97706;">Trade Media Placement</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">8</div><div class="mcc-cal-evt" style="background:#1e293b;">Partner Webinar</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">9</div><div class="mcc-cal-evt" style="background:#1e293b;">Growth Workshop: Brighton</div><div class="mcc-cal-evt" style="background:#059669;">Lean Growth Blog Post</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">10</div><div class="mcc-cal-evt" style="background:#059669;">Analyst Research Brief</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">11</div><div class="mcc-cal-evt" style="background:#3b82f6;">Partner Ecosystem</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">12</div><div class="mcc-cal-evt" style="background:#059669;">Customer Spotlight Series</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">22</div><div class="mcc-cal-evt" style="background:#3b82f6;">Product Launch Phase 1</div><div class="mcc-cal-evt" style="background:#0d9488;">Subscription Reminder</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">23</div><div class="mcc-cal-evt" style="background:#3b82f6;">Enterprise Expansion Campaign</div><div class="mcc-cal-evt" style="background:#1e293b;">Analyst Briefing: Manchester</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">24</div><div class="mcc-cal-evt" style="background:#0d9488;">Campaign Post #1</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">25</div><div class="mcc-cal-evt" style="background:#3b82f6;">AI Prospect Webinar</div></div>
+              <div class="mcc-cal-cell"><div class="mcc-cal-date">26</div><div class="mcc-cal-evt" style="background:#059669;">Platform Advantage Blog</div></div>
+            </div>
+            <div style="padding:.5rem 1.5rem;font-size:.55rem;color:rgba(247,243,236,.45);background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07);">46 items this month · 7 Campaigns · 5 Events · 20 Socials · 6 Blogs · 8 Paids</div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: LIVE INTELLIGENCE ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-truepro" style="background:linear-gradient(135deg,#0a0f1e 0%,#0f172a 50%,#0a1a2e 100%);min-height:420px;align-items:stretch;">
+                    <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;margin-top:.2rem;">ADMIN</div>
+            </div>
+          </div>
+          <!-- Split: Team Chat | True Pro AI -->
+          <div style="flex:1;display:flex;gap:0;overflow:hidden;">
+
+            <!-- LEFT: Team Chat -->
+            <div style="flex:1;display:flex;flex-direction:column;background:#0f1729;border-right:1px solid rgba(255,255,255,.07);position:relative;">
+              <div style="padding:.65rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.03);">
+                <div style="width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 6px #22c55e;animation:mcc-pulse 1.5s infinite;"></div>
+                <span style="font-size:.65rem;font-weight:700;color:#fff;">Team Chat</span>
+                <span style="font-size:.45rem;background:rgba(34,197,94,.2);color:#22c55e;padding:.1rem .4rem;border-radius:8px;letter-spacing:.06em;font-weight:700;">LIVE</span>
+              </div>
+              <div style="flex:1;overflow-y:auto;padding:.75rem .85rem;display:flex;flex-direction:column;gap:.75rem;">
+                <!-- messages -->
+                <div style="display:flex;justify-content:flex-end;"><div style="max-width:75%;"><div style="font-size:.45rem;color:#64748b;text-align:right;margin-bottom:.2rem;">You · 10:14 AM</div><div style="background:linear-gradient(135deg,#1d4ed8,#0d9488);color:#fff;padding:.5rem .7rem;border-radius:10px 10px 2px 10px;font-size:.6rem;line-height:1.5;">Hey team, Q3 campaign assets are in the shared folder for review. Loom walkthrough attached 🎬</div></div></div>
+                <div style="display:flex;gap:.4rem;align-items:flex-start;"><div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.5rem;color:#fff;font-weight:700;flex-shrink:0;">SC</div><div style="max-width:75%;"><div style="font-size:.45rem;color:#64748b;margin-bottom:.2rem;">Sam C. · 10:17 AM</div><div style="background:rgba(255,255,255,.07);color:#e2e8f0;padding:.5rem .7rem;border-radius:2px 10px 10px 10px;font-size:.6rem;line-height:1.5;border:1px solid rgba(255,255,255,.06);">Reviewed! Landing page copy is strong. One suggestion on the CTA: can we test two variants?</div></div></div>
+                <div style="display:flex;gap:.4rem;align-items:flex-start;"><div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:.5rem;color:#fff;font-weight:700;flex-shrink:0;">RK</div><div style="max-width:75%;"><div style="font-size:.45rem;color:#64748b;margin-bottom:.2rem;">R. Kim · 10:22 AM</div><div style="background:rgba(255,255,255,.07);color:#e2e8f0;padding:.5rem .7rem;border-radius:2px 10px 10px 10px;font-size:.6rem;line-height:1.5;border:1px solid rgba(255,255,255,.06);">@You confirmed. UTMs are all live and tracking in HubSpot. Launch is a go ✅</div></div></div>
+                <div style="display:flex;justify-content:flex-end;"><div style="max-width:75%;"><div style="font-size:.45rem;color:#64748b;text-align:right;margin-bottom:.2rem;">You · 10:25 AM</div><div style="background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);color:#fff;padding:.5rem .7rem;border-radius:10px 10px 2px 10px;font-size:.6rem;line-height:1.5;">Perfect. Let's monitor CPL for the first 48 hrs. @TruePro, pull a status report at EOD.</div></div></div>
+                <div style="display:flex;gap:.4rem;align-items:flex-start;"><div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 8px rgba(6,182,212,.4);"><svg width="10" height="10" viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="22" rx="5" fill="#fff" opacity=".9"/><circle cx="19" cy="23" r="3.5" fill="#0e7490"/><circle cx="29" cy="23" r="3.5" fill="#0e7490"/><rect x="20" y="29" width="8" height="2.5" rx="1.2" fill="#0e7490"/></svg></div><div style="max-width:80%;"><div style="font-size:.45rem;color:#06b6d4;margin-bottom:.2rem;font-weight:600;">True Pro AI · Just now</div><div style="background:rgba(6,182,212,.08);color:#e2e8f0;padding:.5rem .7rem;border-radius:2px 10px 10px 10px;font-size:.6rem;line-height:1.5;border:1px solid rgba(6,182,212,.2);">✅ On it. I'll pull CPL, CTR, and conversion rate across all campaign assets at EOD and drop the report here.</div></div></div>
+              </div>
+              <div style="padding:.5rem .75rem;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:.4rem;align-items:center;">
+                <input type="text" placeholder="Message the team... (@ to mention)" style="flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:6px;color:#fff;font-size:.55rem;padding:.35rem .6rem;" disabled>
+                <button style="background:#1d4ed8;border:none;color:#fff;font-size:.6rem;padding:.35rem .65rem;border-radius:6px;cursor:pointer;">Send</button>
+              </div>
+            </div>
+
+            <!-- RIGHT: True Pro AI -->
+            <div style="width:260px;min-width:260px;display:flex;flex-direction:column;background:#080f1d;position:relative;">
+              <div style="padding:.65rem 1rem;border-bottom:1px solid rgba(6,182,212,.15);display:flex;align-items:center;justify-content:space-between;background:rgba(6,182,212,.04);">
+                <div style="display:flex;align-items:center;gap:.5rem;">
+                  <div style="width:26px;height:26px;background:linear-gradient(135deg,#06b6d4,#3b82f6);border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px rgba(6,182,212,.35);"><svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="22" rx="5" fill="#fff"/><circle cx="19" cy="23" r="4" fill="#0e7490"/><circle cx="29" cy="23" r="4" fill="#0e7490"/><rect x="20" y="30" width="8" height="3" rx="1.5" fill="#0e7490"/><rect x="19" y="10" width="10" height="4" rx="2" fill="#0e7490"/></svg></div>
+                  <div><div style="font-size:.65rem;font-weight:700;color:#fff;">True Pro</div><div style="font-size:.42rem;color:#06b6d4;letter-spacing:.07em;">MCC AI AGENT</div></div>
+                </div>
+                <div style="width:7px;height:7px;background:#22c55e;border-radius:50%;box-shadow:0 0 6px #22c55e;animation:mcc-pulse 2s infinite;"></div>
+              </div>
+              <div style="flex:1;padding:.85rem .85rem .5rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;">
+                <div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(6,182,212,.18) 0%,transparent 70%);border-radius:50%;animation:mcc-orb-pulse 3s ease-in-out infinite;">
+                  <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.3)" stroke-width="1"/><circle cx="24" cy="24" r="16" fill="rgba(6,182,212,.12)" stroke="rgba(6,182,212,.2)" stroke-width="1" stroke-dasharray="3 3"/><rect x="14" y="17" width="20" height="16" rx="5" fill="#0e7490"/><circle cx="20" cy="24" r="3.5" fill="#22d3ee"/><circle cx="28" cy="24" r="3.5" fill="#22d3ee"/><rect x="20" y="29" width="8" height="2.5" rx="1.2" fill="#22d3ee"/><rect x="20" y="13" width="8" height="4" rx="2" fill="#0e7490"/></svg>
+                </div>
+                <div style="font-size:.75rem;font-weight:800;color:#fff;text-align:center;">Hey, I'm True Pro.</div>
+                <div style="font-size:.55rem;color:#94a3b8;text-align:center;line-height:1.6;">Ask me anything about your campaigns, pipeline, or content. I'll tell you what's on track and what needs attention.</div>
+                <div style="width:100%;display:flex;flex-direction:column;gap:.35rem;margin-top:.1rem;">
+                  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:.55rem;padding:.4rem .65rem;border-radius:7px;cursor:pointer;display:flex;align-items:center;gap:.4rem;"><svg width="9" height="9" viewBox="0 0 16 16" fill="currentColor" style="color:#06b6d4;flex-shrink:0;"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg> Campaign status report</div>
+                  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:.55rem;padding:.4rem .65rem;border-radius:7px;cursor:pointer;display:flex;align-items:center;gap:.4rem;"><svg width="9" height="9" viewBox="0 0 16 16" fill="none" stroke="#06b6d4" stroke-width="2" style="flex-shrink:0;"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg> Social gaps this month</div>
+                  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:.55rem;padding:.4rem .65rem;border-radius:7px;cursor:pointer;display:flex;align-items:center;gap:.4rem;"><svg width="9" height="9" viewBox="0 0 16 16" fill="none" stroke="#06b6d4" stroke-width="2" style="flex-shrink:0;"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> Upcoming events</div>
+                  <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:.55rem;padding:.4rem .65rem;border-radius:7px;cursor:pointer;display:flex;align-items:center;gap:.4rem;"><svg width="9" height="9" viewBox="0 0 16 16" fill="none" stroke="#f59e0b" stroke-width="2" style="flex-shrink:0;"><circle cx="8" cy="8" r="7"/><line x1="8" y1="5" x2="8" y2="9"/><circle cx="8" cy="11.5" r=".75" fill="#f59e0b"/></svg> Missing tracking URLs</div>
+                </div>
+              </div>
+              <div style="padding:.5rem .75rem;border-top:1px solid rgba(6,182,212,.12);display:flex;gap:.4rem;">
+                <input type="text" placeholder="Ask True Pro anything..." style="flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(6,182,212,.2);border-radius:6px;color:#fff;font-size:.55rem;padding:.35rem .6rem;" disabled>
+                <button style="background:linear-gradient(135deg,#0d9488,#06b6d4);border:none;color:#fff;font-size:.65rem;width:26px;height:26px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;">➤</button>
+              </div>
+              <!-- floating pill -->
+              <div style="position:absolute;bottom:.75rem;right:.75rem;background:linear-gradient(90deg,#0d9488,#06b6d4);color:#fff;font-size:.5rem;font-weight:700;padding:.25rem .75rem;border-radius:20px;display:flex;align-items:center;gap:.3rem;box-shadow:0 0 14px rgba(6,182,212,.4);white-space:nowrap;opacity:.8;">
+                <svg width="9" height="9" viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="22" rx="5" fill="#fff"/><circle cx="19" cy="23" r="4" fill="#0e7490"/><circle cx="29" cy="23" r="4" fill="#0e7490"/></svg>
+                True Pro · Active
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── SCREEN: AGENTIC STRATEGY ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-strategy">
+                    <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;margin-top:.2rem;">ADMIN</div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);">
+              <span style="font-size:1rem;font-weight:700;background:linear-gradient(90deg,#3B82F6,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Agentic Strategy</span>
+              <button class="mcc-report-btn" style="font-size:.55rem;">✦ Summarize</button>
+            </div>
+            <!-- tabs -->
+            <div style="display:flex;gap:0;padding:0 1.5rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <div class="mcc-strat-tab mcc-strat-active">01 Vision</div>
+              <div class="mcc-strat-tab">02 Timeline</div>
+              <div class="mcc-strat-tab">03 Strategy</div>
+              <div class="mcc-strat-tab">04 Execution</div>
+              <div class="mcc-strat-tab">05 Measurement</div>
+              <div class="mcc-strat-tab">06 Risks &amp; asks</div>
+            </div>
+            <!-- vision hero -->
+            <div style="margin:1rem 1.5rem;background:linear-gradient(135deg,#1e3a8a,#3b82f6);border-radius:10px;padding:1.25rem 1.5rem;">
+              <span style="background:rgba(255,255,255,.2);color:#fff;font-size:.5rem;font-weight:700;letter-spacing:.1em;padding:.2rem .6rem;border-radius:3px;text-transform:uppercase;">AI Integration Strategy</span>
+              <div style="font-size:1rem;font-weight:700;color:#fff;margin:.5rem 0 .25rem;line-height:1.3;">Scale acquisition and revenue<br>without scaling cost.</div>
+            </div>
+            <!-- five commitments -->
+            <div style="margin:0 1.5rem;background:#0f172a;border-radius:10px;padding:1rem 1.25rem;">
+              <div style="font-size:.5rem;font-weight:700;color:#94a3b8;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;">FIVE COMMITMENTS</div>
+              <div class="mcc-commitment"><span class="mcc-commit-num">01</span> More pipeline from the same team.</div>
+              <div class="mcc-commitment"><span class="mcc-commit-num">02</span> AI that qualifies, routes, and books: around the clock.</div>
+              <div class="mcc-commitment"><span class="mcc-commit-num">03</span> Reporting that answers any commercial question on demand.</div>
+              <div class="mcc-commitment"><span class="mcc-commit-num">04</span> A content engine that compounds over time.</div>
+              <div class="mcc-commitment" style="border:none;padding-bottom:0;"><span class="mcc-commit-num">05</span> One stack, one truth, no parallel systems.</div>
+            </div>
+            <!-- why now -->
+            <div style="margin:1rem 1.5rem;"><div style="font-size:.7rem;font-weight:600;color:rgba(247,243,236,.9);margin-bottom:.75rem;">Why this is the moment</div>
+            <div style="display:flex;gap:.75rem;">
+              <div class="mcc-why-card"><div style="font-size:1.4rem;font-weight:800;color:#3b82f6;">58%</div><div style="font-size:.55rem;color:rgba(247,243,236,.55);">of Google queries now show an AI Overview</div></div>
+              <div class="mcc-why-card"><div style="font-size:1.4rem;font-weight:800;color:#3b82f6;">3.5×</div><div style="font-size:.55rem;color:rgba(247,243,236,.55);">More output, same headcount</div></div>
+              <div class="mcc-why-card"><div style="font-size:1.4rem;font-weight:800;color:#3b82f6;">Day 1</div><div style="font-size:.55rem;color:rgba(247,243,236,.55);">Clean data foundation from the start</div></div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: SOCIAL ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-social">
+          <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem;"><div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;">ADMIN</div><div style="font-size:.45rem;color:rgba(255,255,255,.35);cursor:pointer;">Sign out</div></div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:.85rem 1.5rem;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:1rem;font-weight:700;color:rgba(247,243,236,.9);">Social Calendar</span>
+              <div style="display:flex;gap:.5rem;align-items:center;">
+                <button class="mcc-view-toggle mcc-vt-active">List</button>
+                <button class="mcc-view-toggle">Calendar</button>
+                <button style="background:#0d9488;color:#fff;border:none;padding:.3rem .75rem;border-radius:6px;font-size:.6rem;font-weight:700;cursor:pointer;">+ Add Post</button>
+              </div>
+            </div>
+            <!-- donut charts -->
+            <div style="display:flex;gap:.65rem;padding:.65rem 1.5rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY PILLAR</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#0d9488" stroke-width="9" stroke-dasharray="60 91" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#3b82f6" stroke-width="9" stroke-dasharray="38 113" stroke-dashoffset="42"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">62</text></svg></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY VERTICAL</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#6366f1" stroke-width="9" stroke-dasharray="75 76" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#f59e0b" stroke-width="9" stroke-dasharray="28 123" stroke-dashoffset="57"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">62</text></svg></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY FUNNEL</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#22c55e" stroke-width="9" stroke-dasharray="45 106" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#f59e0b" stroke-width="9" stroke-dasharray="30 121" stroke-dashoffset="27"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">62</text></svg></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY PLATFORM</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#1d4ed8" stroke-width="9" stroke-dasharray="90 61" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#0891b2" stroke-width="9" stroke-dasharray="24 127" stroke-dashoffset="72"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">62</text></svg></div>
+              <!-- month tabs -->
+              <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:.25rem;padding-left:.75rem;border-left:1px solid rgba(255,255,255,.1);">
+                <div style="font-size:.45rem;color:#94a3b8;letter-spacing:.08em;font-weight:700;">MONTHS</div>
+                <div style="display:flex;gap:.25rem;flex-wrap:wrap;">
+                  <span style="font-size:.45rem;padding:.15rem .35rem;border-radius:3px;background:#0d9488;color:#fff;font-weight:700;">Jun 26</span>
+                  <span style="font-size:.45rem;padding:.15rem .35rem;border-radius:3px;background:rgba(255,255,255,.07);color:rgba(247,243,236,.4);">Jul 26</span>
+                  <span style="font-size:.45rem;padding:.15rem .35rem;border-radius:3px;background:rgba(255,255,255,.07);color:rgba(247,243,236,.4);">Aug 26</span>
+                </div>
+              </div>
+            </div>
+            <!-- filter row -->
+            <div style="padding:.45rem 1.5rem;background:rgba(255,255,255,.02);border-bottom:1px solid rgba(255,255,255,.07);display:flex;gap:.4rem;align-items:center;">
+              <input type="text" placeholder="🔍 Search posts..." style="font-size:.52rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.22rem .5rem;color:rgba(247,243,236,.8);background:rgba(255,255,255,.06);width:110px;" disabled>
+              <select style="font-size:.5rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.22rem .4rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Platforms</option></select>
+              <select style="font-size:.5rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.22rem .4rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Pillars</option></select>
+              <select style="font-size:.5rem;border:1px solid rgba(255,255,255,.15);border-radius:5px;padding:.22rem .4rem;color:rgba(247,243,236,.5);background:rgba(255,255,255,.06);" disabled><option>All Statuses</option></select>
+            </div>
+            <!-- table -->
+            <div style="overflow-x:auto;">
+              <table style="width:100%;border-collapse:collapse;font-size:.52rem;">
+                <thead><tr style="background:rgba(255,255,255,.05);border-bottom:2px solid rgba(255,255,255,.1);">
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">STATUS</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">DATE</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">TOPIC / CAPTION</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">PLATFORM</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">PILLAR</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">VERTICAL</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">FUNNEL</th>
+                  <th style="padding:.45rem .75rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">OWNER</th>
+                </tr></thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Scheduled</span></td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.5);">Mon 23 Jun</td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.85);max-width:160px;">How enterprises scale revenue without scaling headcount</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.12rem .4rem;border-radius:4px;">LinkedIn</span></td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Industry Insight</td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Technology</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(34,197,94,.15);color:#4ade80;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;">TOFU</span></td>
+                    <td style="padding:.4rem .75rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">JR</div></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Scheduled</span></td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.5);">Tue 24 Jun</td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.85);max-width:160px;">5 signs your platform is holding your growth back</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.12rem .4rem;border-radius:4px;">LinkedIn</span></td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Thought Leadership</td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Financial Services</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(245,158,11,.2);color:#fbbf24;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;">MOFU</span></td>
+                    <td style="padding:.4rem .75rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">SC</div></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(255,255,255,.1);color:rgba(247,243,236,.6);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Draft</span></td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.5);">Wed 25 Jun</td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.85);max-width:160px;">Product Summit 2026 — register now before seats fill</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(6,182,212,.15);color:#67e8f9;font-size:.42rem;font-weight:700;padding:.12rem .4rem;border-radius:4px;">Twitter / X</span></td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Event Promo</td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">SaaS</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(245,158,11,.2);color:#fbbf24;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;">MOFU</span></td>
+                    <td style="padding:.4rem .75rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#fde68a);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#1e293b;font-weight:700;">RK</div></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Scheduled</span></td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.5);">Thu 26 Jun</td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.85);max-width:160px;">Customer spotlight: Meridian Systems cuts inventory costs</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.12rem .4rem;border-radius:4px;">LinkedIn</span></td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Customer Story</td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Healthcare</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(139,92,246,.2);color:#c4b5fd;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;">BOFU</span></td>
+                    <td style="padding:.4rem .75rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">JR</div></td>
+                  </tr>
+                  <tr style="background:rgba(255,255,255,.02);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Overdue</span></td>
+                    <td style="padding:.4rem .75rem;color:#f87171;">Fri 20 Jun</td>
+                    <td style="padding:.4rem .75rem;color:rgba(247,243,236,.85);max-width:160px;">Partner ecosystem announcement — awaiting final copy approval</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(59,130,246,.2);color:#93c5fd;font-size:.42rem;font-weight:700;padding:.12rem .4rem;border-radius:4px;">LinkedIn</span></td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Partnership</td>
+                    <td style="padding:.4rem .75rem;color:#64748b;">Across</td>
+                    <td style="padding:.4rem .75rem;"><span style="background:rgba(34,197,94,.15);color:#4ade80;font-size:.42rem;padding:.1rem .35rem;border-radius:3px;">TOFU</span></td>
+                    <td style="padding:.4rem .75rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">TM</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: PAID ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-paid">
+          <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem;"><div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;">ADMIN</div><div style="font-size:.45rem;color:rgba(255,255,255,.35);cursor:pointer;">Sign out</div></div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:.85rem 1.5rem;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:1rem;font-weight:700;color:rgba(247,243,236,.9);">Paid Media Placements</span>
+              <div style="display:flex;gap:.5rem;align-items:center;">
+                <button class="mcc-view-toggle mcc-vt-active">List</button>
+                <button class="mcc-view-toggle">Calendar</button>
+                <button style="background:#d97706;color:#fff;border:none;padding:.3rem .75rem;border-radius:6px;font-size:.6rem;font-weight:700;cursor:pointer;">+ Add Placement</button>
+              </div>
+            </div>
+            <!-- donut charts -->
+            <div style="display:flex;gap:.65rem;padding:.65rem 1.5rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY REGION</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#d97706" stroke-width="9" stroke-dasharray="65 86" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#f59e0b" stroke-width="9" stroke-dasharray="30 121" stroke-dashoffset="47"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">8</text></svg></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY STATUS</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#22c55e" stroke-width="9" stroke-dasharray="56 95" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#94a3b8" stroke-width="9" stroke-dasharray="28 123" stroke-dashoffset="38"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">8</text></svg></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY VERTICAL</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#3b82f6" stroke-width="9" stroke-dasharray="70 81" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#6366f1" stroke-width="9" stroke-dasharray="35 116" stroke-dashoffset="52"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">8</text></svg></div>
+              <div class="mcc-donut-card"><div class="mcc-donut-label">BY FUNNEL</div><svg viewBox="0 0 72 72" width="62" height="62"><circle cx="36" cy="36" r="24" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="36" cy="36" r="24" fill="none" stroke="#0d9488" stroke-width="9" stroke-dasharray="80 71" stroke-dashoffset="-18"/><circle cx="36" cy="36" r="24" fill="none" stroke="#f59e0b" stroke-width="9" stroke-dasharray="30 121" stroke-dashoffset="62"/><text x="36" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">8</text></svg></div>
+            </div>
+            <!-- warning banner -->
+            <div style="margin:.6rem 1.5rem;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:7px;padding:.45rem .85rem;display:flex;align-items:center;gap:.5rem;">
+              <span style="font-size:.8rem;">⚠</span>
+              <span style="font-size:.55rem;color:#fbbf24;font-weight:600;">7 active placements missing tracking URLs.</span>
+              <span style="font-size:.52rem;color:rgba(251,191,36,.7);">Click a row to add them.</span>
+            </div>
+            <!-- table -->
+            <div style="overflow-x:auto;padding:0 1.5rem;">
+              <table style="width:100%;border-collapse:collapse;font-size:.52rem;">
+                <thead><tr style="background:rgba(255,255,255,.05);border-bottom:2px solid rgba(255,255,255,.1);">
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">STATUS</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">LAUNCH DATE</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">PUBLICATION</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">REGION</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">PLACEMENT</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">TRACKING</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">AD UNITS</th>
+                  <th style="padding:.4rem .65rem;text-align:left;font-size:.44rem;font-weight:700;color:rgba(247,243,236,.4);letter-spacing:.08em;">OWNER</th>
+                </tr></thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Active</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">1 Jun 2026</td>
+                    <td style="padding:.38rem .65rem;font-weight:600;color:rgba(247,243,236,.9);">Tech Insider</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">EMEA</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Banner + Newsletter</td>
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Missing</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">2</td>
+                    <td style="padding:.38rem .65rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">JR</div></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Active</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">15 May 2026</td>
+                    <td style="padding:.38rem .65rem;font-weight:600;color:rgba(247,243,236,.9);">Software Weekly</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Americas</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Sponsored Article</td>
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Missing</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">1</td>
+                    <td style="padding:.38rem .65rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#fde68a);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#1e293b;font-weight:700;">RK</div></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Active</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">1 Jun 2026</td>
+                    <td style="padding:.38rem .65rem;font-weight:600;color:rgba(247,243,236,.9);">Enterprise Review</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">APAC</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Display + Email</td>
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Live</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">3</td>
+                    <td style="padding:.38rem .65rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">SC</div></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(34,197,94,.18);color:#4ade80;border:1px solid rgba(34,197,94,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Active</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">1 Jun 2026</td>
+                    <td style="padding:.38rem .65rem;font-weight:600;color:rgba(247,243,236,.9);">Digital Business Today</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">EMEA</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Newsletter Banner</td>
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.3);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Missing</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">1</td>
+                    <td style="padding:.38rem .65rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">TM</div></td>
+                  </tr>
+                  <tr style="cursor:pointer;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='rgba(255,255,255,.02)'">
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(148,163,184,.12);color:#94a3b8;border:1px solid rgba(148,163,184,.2);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Pending</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">1 Jul 2026</td>
+                    <td style="padding:.38rem .65rem;font-weight:600;color:rgba(247,243,236,.9);">Enterprise Tech Today</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Americas</td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">Sponsored Content</td>
+                    <td style="padding:.38rem .65rem;"><span style="background:rgba(148,163,184,.12);color:#94a3b8;border:1px solid rgba(148,163,184,.2);font-size:.42rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;">Not set</span></td>
+                    <td style="padding:.38rem .65rem;color:rgba(247,243,236,.5);">2</td>
+                    <td style="padding:.38rem .65rem;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:.42rem;color:#fff;font-weight:700;">JR</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SCREEN: LEADS ── -->
+        <div class="mcc-screen mcc-hidden" id="mcc-s-leads">
+                    <div class="mcc-sidebar">
+            <div class="mcc-logo-block">
+              <div class="mcc-logo-icon"></div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;color:#fff;letter-spacing:.05em;line-height:1.2;">MARKETING<br><span style="color:#06b6d4;">COMMAND CENTER</span></div>
+              </div>
+            </div>
+            <div class="mcc-nav-group-label">Overview</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg></span> Dashboard</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="9" width="3.5" height="7" rx="1"/><rect x="6.25" y="5" width="3.5" height="11" rx="1"/><rect x="12.5" y="1" width="3.5" height="15" rx="1"/></svg></span> KPIs &amp; Measurement</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="12" rx="2"/><line x1="1" y1="7" x2="15" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg></span> Master Calendar</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg></span> Agentic Strategy</div>
+            <div class="mcc-nav-group-label">Planning</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><path d="M2 8c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6S2 11.3 2 8zm9.5-1.5c-.4-.4-1-.4-1.4 0L8 8.6 6.9 7.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.8 1.8c.4.4 1 .4 1.4 0l2.8-2.8c.4-.4.4-1 0-1.4z"/></svg></span> Campaigns</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H2a1 1 0 00-1 1v7a1 1 0 001 1h5l2 3 2-3h3a1 1 0 001-1V3a1 1 0 00-1-1z"/></svg></span> Social Media</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2L9 4 12 7l2-2-3-3zM2 10l2 4 4-2-6-2z"/><line x1="9" y1="4" x2="12" y2="7"/></svg></span> Editorial</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1,12 5,6 8,9 11,4 15,7"/></svg></span> Paid Placements</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="5"/><path d="M4 13s1-2 4-2 4 2 4 2"/></svg></span> Events &amp; Webinars</div>
+            <div class="mcc-nav-group-label">Leads</div>
+            <div class="mcc-nav-item mcc-nav-active"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg></span> Leads</div>
+            <div class="mcc-nav-group-label">Admin</div>
+            <div class="mcc-nav-item"><span class="mcc-nav-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.1 3.1l1.4 1.4M11.5 11.5l1.4 1.4M3.1 12.9l1.4-1.4M11.5 4.5l1.4-1.4"/></svg></span> Settings</div>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:.65rem;color:#e2e8f0;font-weight:600;">Jessica Rudnicki</div>
+              <div style="display:inline-block;font-size:.45rem;background:#3b82f6;color:#fff;padding:.15rem .4rem;border-radius:3px;letter-spacing:.06em;margin-top:.2rem;">ADMIN</div>
+            </div>
+          </div>
+          <div class="mcc-main-area" style="background:#0d1526;">
+            <div style="padding:.85rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);">
+              <span style="font-size:1rem;font-weight:700;color:rgba(247,243,236,.9);">Leads</span>
+              <button class="mcc-report-btn" style="font-size:.55rem;">✉ Weekly report</button>
+            </div>
+            <!-- lead stat cards -->
+            <div style="display:flex;gap:.6rem;padding:.85rem 1.25rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <div class="mcc-lead-stat"><div class="mcc-lead-stat-label" style="color:#64748b;">● TOTAL</div><div class="mcc-lead-stat-num">417</div><div class="mcc-lead-stat-sub">Leads recorded · all time</div><div class="mcc-stat-bar" style="margin-top:.3rem;"><div style="width:55%;background:#94a3b8;"></div></div></div>
+              <div class="mcc-lead-stat"><div class="mcc-lead-stat-label" style="color:#3b82f6;">● MAL</div><div class="mcc-lead-stat-num" style="color:#3b82f6;">340</div><div class="mcc-lead-stat-sub">Marketing accepted · 82%</div><div class="mcc-stat-bar" style="margin-top:.3rem;"><div style="width:82%;background:#3b82f6;"></div></div></div>
+              <div class="mcc-lead-stat"><div class="mcc-lead-stat-label" style="color:#0d9488;">● MQL</div><div class="mcc-lead-stat-num" style="color:#0d9488;">265</div><div class="mcc-lead-stat-sub">ICP qualified · MAL to MQL 78%</div><div class="mcc-stat-bar" style="margin-top:.3rem;"><div style="width:78%;background:#0d9488;"></div></div></div>
+              <div class="mcc-lead-stat"><div class="mcc-lead-stat-label" style="color:#0d9488;">● SQL</div><div class="mcc-lead-stat-num" style="color:#0d9488;">265</div><div class="mcc-lead-stat-sub">Handed to sales · 100%</div><div class="mcc-stat-bar" style="margin-top:.3rem;"><div style="width:100%;background:#0d9488;"></div></div></div>
+              <div class="mcc-lead-stat"><div class="mcc-lead-stat-label" style="color:#64748b;">● PENDING</div><div class="mcc-lead-stat-num">0</div><div class="mcc-lead-stat-sub">MQLs pending · all reviewed</div><div class="mcc-stat-bar" style="margin-top:.3rem;"><div style="width:0%;background:#94a3b8;"></div></div></div>
+            </div>
+            <!-- tabs -->
+            <div style="display:flex;gap:0;padding:0 1.25rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.07);">
+              <div class="mcc-strat-tab mcc-strat-active">Overview</div>
+              <div class="mcc-strat-tab">Pipeline</div>
+              <div class="mcc-strat-tab">Third Party</div>
+              <div class="mcc-strat-tab">Events</div>
+              <div class="mcc-strat-tab">Other Leads</div>
+            </div>
+            <!-- lead table -->
+            <div style="padding:.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:.65rem;font-weight:700;color:rgba(247,243,236,.9);">All leads <span style="background:rgba(255,255,255,.1);color:rgba(247,243,236,.6);padding:.1rem .4rem;border-radius:8px;font-size:.5rem;">380</span></span>
+              <div style="display:flex;gap:.4rem;">
+                <button style="font-size:.5rem;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);padding:.2rem .5rem;border-radius:5px;color:rgba(247,243,236,.6);cursor:pointer;">+ Quick log</button>
+                <button style="font-size:.5rem;background:#3b82f6;color:#fff;border:none;padding:.2rem .6rem;border-radius:5px;cursor:pointer;font-weight:600;">+ Add lead</button>
+              </div>
+            </div>
+            <div style="padding:0 1.25rem;overflow-x:auto;">
+              <table class="mcc-leads-table">
+                <thead><tr><th>DATE</th><th>COMPANY</th><th>CONTACT</th><th>REGION</th><th>SOURCE</th><th>STAGE</th><th>VERTICAL</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:rgba(247,243,236,.4);">14 Jun 2026</td><td style="color:#3b82f6;font-weight:600;">Northgate Technologies</td><td>J. Hartwell</td><td style="color:rgba(247,243,236,.5);">Americas</td><td><span class="mcc-src-badge">Campaign / Email</span></td><td><span class="mcc-stage-badge mcc-stage-sql">★ SQL</span></td><td style="color:#64748b;">Financial Services</td></tr>
+                  <tr><td style="color:rgba(247,243,236,.4);">13 Jun 2026</td><td style="color:#3b82f6;font-weight:600;">Meridian Systems</td><td>S. Okafor</td><td style="color:rgba(247,243,236,.5);">EMEA</td><td><span class="mcc-src-badge">Online Search / SEO</span></td><td><span class="mcc-stage-badge mcc-stage-mql">MQL</span></td><td style="color:#64748b;">Technology</td></tr>
+                  <tr><td style="color:rgba(247,243,236,.4);">12 Jun 2026</td><td style="color:#3b82f6;font-weight:600;">Vantage Solutions</td><td>T. Brennan</td><td style="color:rgba(247,243,236,.5);">APAC</td><td><span class="mcc-src-badge">Event</span></td><td><span class="mcc-stage-badge mcc-stage-mal">MAL</span></td><td style="color:#64748b;">Financial Services</td></tr>
+                  <tr><td style="color:rgba(247,243,236,.4);">11 Jun 2026</td><td style="color:#3b82f6;font-weight:600;">Pinnacle Corp</td><td>R. Petrov</td><td style="color:rgba(247,243,236,.5);">EMEA</td><td><span class="mcc-src-badge">Online Search / SEO</span></td><td><span class="mcc-stage-badge mcc-stage-customer">Customer</span></td><td style="color:#64748b;">Professional Services</td></tr>
+                  <tr><td style="color:rgba(247,243,236,.4);">10 Jun 2026</td><td style="color:#3b82f6;font-weight:600;">Brightfield Inc</td><td>A. Williams</td><td style="color:rgba(247,243,236,.5);">Americas</td><td><span class="mcc-src-badge">Campaign / Email</span></td><td><span class="mcc-stage-badge mcc-stage-mql">MQL</span></td><td style="color:#64748b;">Healthcare</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /mcc-frame --></div><!-- /gradient border --></div><!-- /frame wrap -->
+    </div><!-- /mcc-scaler-inner -->
+    </div><!-- /mcc-scaler -->
+    <div style="text-align:center;margin-top:1.75rem;display:flex;align-items:center;justify-content:center;">
+      <div style="display:inline-flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:600;letter-spacing:.06em;border:1px solid rgba(250,204,21,.3);padding:.55rem 1.4rem;border-radius:30px;background:rgba(250,204,21,.07);box-shadow:0 0 24px rgba(250,204,21,.1),0 0 60px rgba(250,204,21,.04);backdrop-filter:blur(8px);">
+        <span style="width:8px;height:8px;background:#facc15;border-radius:50%;display:inline-block;box-shadow:0 0 8px #facc15,0 0 16px rgba(250,204,21,.4);animation:mcc-pulse 1.8s infinite;flex-shrink:0;"></span>
+        <span style="background:linear-gradient(90deg,#facc15,#fde68a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Interactive replica</span>
+        <span style="color:rgba(250,204,21,.35);">·</span>
+        <span style="color:rgba(247,243,236,.45);font-weight:500;">data anonymized</span>
+      </div>
+    </div>
+
+    <!-- Feature callout cards -->
+    <div class="section-inner" style="max-width: var(--max-w); margin: 3.5rem auto 0; padding: 0 2rem;">
+      <div class="feature-callout-grid" style="background:linear-gradient(135deg,rgba(150,178,82,.2),rgba(59,130,246,.15),rgba(6,182,212,.2));border-radius:16px;overflow:hidden;box-shadow:0 0 60px rgba(59,130,246,.08);">
+
+        <div class="fade-in" style="background:rgba(8,13,24,.95);padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:background .3s;" onmouseover="this.style.background='rgba(12,20,36,.98)'" onmouseout="this.style.background='rgba(8,13,24,.95)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#96B252,transparent);"></div>
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(150,178,82,.12);border:1px solid rgba(150,178,82,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 0 16px rgba(150,178,82,.1);">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#96B252" stroke-width="1.5"><rect x="0" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="0" width="6.5" height="6.5" rx="1.5"/><rect x="0" y="9.5" width="6.5" height="6.5" rx="1.5"/><rect x="9.5" y="9.5" width="6.5" height="6.5" rx="1.5"/></svg>
+          </div>
+          <div style="font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.6rem;">One Stack, One Truth</div>
+          <p style="color:rgba(247,243,236,.6);font-size:.85rem;line-height:1.65;margin:0;">Campaigns, social, editorial, paid, events, and leads. All in one place, one data source. No spreadsheets. No parallel systems.</p>
+        </div>
+
+        <div class="fade-in delay-1" style="background:rgba(8,13,24,.95);padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:background .3s;" onmouseover="this.style.background='rgba(12,20,36,.98)'" onmouseout="this.style.background='rgba(8,13,24,.95)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4,transparent);"></div>
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 0 16px rgba(6,182,212,.1);">
+            <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="22" rx="5" fill="rgba(6,182,212,.3)" stroke="#06b6d4" stroke-width="1.5"/><circle cx="19" cy="23" r="4" fill="#06b6d4"/><circle cx="29" cy="23" r="4" fill="#06b6d4"/><rect x="20" y="29" width="8" height="2.5" rx="1.2" fill="#06b6d4"/></svg>
+          </div>
+          <div style="font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#06b6d4;margin-bottom:.6rem;">True Pro AI Agent</div>
+          <p style="color:rgba(247,243,236,.6);font-size:.85rem;line-height:1.65;margin:0;">An embedded AI agent that knows your campaigns, pipeline, and content. Ask what's off track, what's missing a UTM, or what's next week.</p>
+        </div>
+
+        <div class="fade-in delay-2" style="background:rgba(8,13,24,.95);padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:background .3s;" onmouseover="this.style.background='rgba(12,20,36,.98)'" onmouseout="this.style.background='rgba(8,13,24,.95)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#96B252,#06b6d4,transparent);"></div>
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(150,178,82,.1);border:1px solid rgba(150,178,82,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 0 16px rgba(150,178,82,.08);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z" fill="rgba(150,178,82,.4)" stroke="#96B252" stroke-width="1" stroke-linejoin="round"/></svg>
+          </div>
+          <div style="font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.6rem;">Built with Claude Code</div>
+          <p style="color:rgba(247,243,236,.6);font-size:.85rem;line-height:1.65;margin:0;">From database schema to front-end UI to AI agent integration. Every line of this platform was built from scratch using Claude Code.</p>
+        </div>
+
+        <div class="fade-in delay-3" style="background:rgba(8,13,24,.95);padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:background .3s;" onmouseover="this.style.background='rgba(12,20,36,.98)'" onmouseout="this.style.background='rgba(8,13,24,.95)'">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#3b82f6,transparent);"></div>
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:0 0 16px rgba(59,130,246,.08);">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:#3b82f6;"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.4l-3.7 2 .7-4.1-3-2.9 4.2-.8z"/></svg>
+          </div>
+          <div style="font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#3b82f6;margin-bottom:.6rem;">Agentic Strategy Layer</div>
+          <p style="color:rgba(247,243,236,.6);font-size:.85rem;line-height:1.65;margin:0;">A living strategy doc with vision, timeline, execution plan, and risk tracking — embedded in the tool so strategy and execution stay connected.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <style>
+  .mcc-tabs { border-bottom: none; }
+  .mcc-tab-btn { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); color: rgba(247,243,236,.5); font-size: .62rem; font-weight: 600; letter-spacing: .05em; padding: .45rem 1rem; border-radius: 8px; cursor: pointer; transition: all .2s; backdrop-filter:blur(8px); }
+  .mcc-tab-btn:hover { background: rgba(255,255,255,.09); color: rgba(247,243,236,.9); border-color:rgba(255,255,255,.18); }
+  .mcc-tab-btn.mcc-active { background: rgba(59,130,246,.1); border-color: rgba(59,130,246,.35); color: #5eead4; box-shadow: inset 0 -2px 0 rgba(6,182,212,.5); transform: translateY(-1px); }
+  .mcc-frame { border-radius: 12px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,.7), 0 0 0 1px rgba(59,130,246,.2), 0 0 40px rgba(59,130,246,.08); border: 1px solid rgba(59,130,246,.25); position:relative; animation: mcc-frame-glow 4s ease-in-out infinite; }
+  @keyframes orb-drift-a { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-40px,30px) scale(1.05); } }
+  @keyframes orb-drift-b { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(30px,-40px) scale(1.08); } }
+  @keyframes mcc-frame-glow { 0%,100% { box-shadow: 0 40px 100px rgba(0,0,0,.7), 0 0 0 1px rgba(59,130,246,.2), 0 0 40px rgba(59,130,246,.08); } 50% { box-shadow: 0 40px 100px rgba(0,0,0,.7), 0 0 0 1px rgba(6,182,212,.35), 0 0 60px rgba(6,182,212,.14); } }
+  @keyframes mcc-pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.6; transform:scale(1.3); } }
+  .mcc-chrome-bar { background: #111827; padding: .55rem 1rem; display: flex; align-items: center; gap: .5rem; border-bottom: 1px solid rgba(255,255,255,.06); border-top: 2px solid transparent; border-image: linear-gradient(90deg,#96B252,#3b82f6,#06b6d4) 1; }
+  .mcc-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .mcc-url-pill { background: rgba(255,255,255,.06); color: rgba(255,255,255,.35); font-size: .55rem; padding: .22rem .85rem; border-radius: 20px; margin-left: .75rem; flex: 1; max-width: 280px; border: 1px solid rgba(255,255,255,.07); letter-spacing:.02em; }
+  .mcc-screen { display: flex; min-height: 420px; }
+  .mcc-hidden { display: none !important; }
+  .mcc-sidebar { width: 160px; min-width: 160px; background: linear-gradient(180deg,#0d1526 0%,#0a1020 100%); padding: .75rem .6rem; display: flex; flex-direction: column; gap: .15rem; border-right: 1px solid rgba(59,130,246,.12); }
+  .mcc-logo-block { display: flex; align-items: center; gap: .4rem; margin-bottom: .75rem; }
+  .mcc-logo-icon { width: 26px; height: 26px; background: linear-gradient(135deg, #2563eb, #06b6d4); border-radius: 7px; flex-shrink: 0; box-shadow: 0 0 12px rgba(6,182,212,.35); display:flex;align-items:center;justify-content:center; }
+  .mcc-nav-group-label { font-size: .45rem; font-weight: 700; color: #475569; letter-spacing: .12em; text-transform: uppercase; padding: .5rem 0 .2rem .4rem; }
+  .mcc-nav-item { font-size: .6rem; color: #94a3b8; padding: .3rem .5rem; border-radius: 5px; cursor: pointer; display: flex; align-items: center; gap: .35rem; }
+  .mcc-nav-icon { font-size: .55rem; }
+  .mcc-nav-active { background: rgba(59,130,246,.15); color: #93c5fd; font-weight: 600; border-left: 2px solid #3b82f6; margin-left: -2px; border-radius: 0 5px 5px 0; }
+  .mcc-main-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+  .mcc-top-bar { background: linear-gradient(135deg, #1a2f6b 0%, #1d4ed8 60%, #0e7490 100%); padding: .85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .mcc-sparkle { width: 28px; height: 28px; background: rgba(255,255,255,.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .8rem; color: #60efff; flex-shrink: 0; }
+  .mcc-report-btn { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.8); font-size: .55rem; padding: .3rem .7rem; border-radius: 6px; cursor: pointer; }
+  .mcc-stat-grid { display: flex; gap: .5rem; padding: .75rem 1rem; background: rgba(255,255,255,.03); }
+  .mcc-stat-card { flex: 1; background: rgba(255,255,255,.97); border: 1px solid rgba(226,232,240,.8); border-radius: 10px; padding: .6rem .75rem; min-width: 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .mcc-stat-label { font-size: .45rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .2rem; }
+  .mcc-stat-num { font-size: 1.4rem; font-weight: 800; line-height: 1; margin-bottom: .15rem; }
+  .mcc-stat-sub { font-size: .5rem; color: #64748b; margin-bottom: .35rem; }
+  .mcc-stat-bar { height: 2px; background: rgba(255,255,255,.1); border-radius: 1px; }
+  .mcc-stat-bar div { height: 100%; border-radius: 1px; }
+  .mcc-panel { background: rgba(255,255,255,.04); margin: .5rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); padding: .75rem 1rem; }
+  .mcc-panel-header { display: flex; align-items: center; gap: .75rem; margin-bottom: .5rem; font-size: .65rem; }
+  .mcc-view-all { margin-left: auto; font-size: .55rem; color: #3b82f6; cursor: pointer; }
+  .mcc-badge { font-size: .5rem; font-weight: 600; padding: .15rem .4rem; border-radius: 10px; }
+  .mcc-badge-gray { background: rgba(148,163,184,.12); color: #94a3b8; border: 1px solid rgba(148,163,184,.2); }
+  .mcc-badge-blue { background: #dbeafe; color: #1d4ed8; }
+  .mcc-badge-green { background: rgba(34,197,94,.18); color: #4ade80; border: 1px solid rgba(34,197,94,.3); }
+  .mcc-badge-purple { background: #ede9fe; color: #7c3aed; }
+  .mcc-campaign-row { display: flex; align-items: center; justify-content: space-between; padding: .4rem 0; border-bottom: 1px solid rgba(255,255,255,.07); font-size: .6rem; color: rgba(247,243,236,.75); gap: 1rem; }
+  .mcc-prog-wrap { width: 120px; min-width: 80px; height: 3px; background: rgba(255,255,255,.1); border-radius: 2px; flex-shrink: 0; }
+  .mcc-prog-bar { height: 100%; border-radius: 2px; }
+  .mcc-donut-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: .6rem .75rem; display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+  .mcc-donut-label { font-size: .45rem; font-weight: 700; color: #64748b; letter-spacing: .08em; text-transform: uppercase; }
+  .mcc-camp-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: .75rem; min-width: 160px; max-width: 185px; flex-shrink: 0; }
+  .mcc-camp-status { font-size: .5rem; color: #4ade80; background: rgba(34,197,94,.18); padding: .1rem .4rem; border-radius: 10px; display: inline-block; margin-bottom: .4rem; }
+  .mcc-camp-name { font-size: .65rem; font-weight: 700; color: #1e293b; line-height: 1.3; margin-bottom: .4rem; }
+  .mcc-view-toggle { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); color: rgba(247,243,236,.5); font-size: .55rem; padding: .2rem .5rem; border-radius: 5px; cursor: pointer; }
+  .mcc-vt-active { background: #1e293b; color: #fff; border-color: #1e293b; }
+  .mcc-cal-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.07); flex: 1; }
+  .mcc-cal-head { font-size: .5rem; font-weight: 700; color: rgba(247,243,236,.5); letter-spacing: .08em; text-align: center; padding: .35rem 0; background: rgba(255,255,255,.05); border-right: 1px solid rgba(255,255,255,.07); border-bottom: 1px solid rgba(255,255,255,.07); }
+  .mcc-cal-cell { border-right: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); padding: .3rem .35rem; min-height: 52px; display: flex; flex-direction: column; gap: .15rem; background: rgba(255,255,255,.02); }
+  .mcc-cal-date { font-size: .5rem; color: rgba(247,243,236,.4); margin-bottom: .1rem; }
+  .mcc-cal-evt { font-size: .42rem; color: #fff; border-radius: 2px; padding: .08rem .25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mcc-nav-arrow { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); color: rgba(247,243,236,.6); font-size: .6rem; padding: .2rem .5rem; border-radius: 5px; cursor: pointer; }
+  .mcc-truepro-panel { position: absolute; right: 12px; top: 0; bottom: 0; width: 280px; background: #1e293b; border-left: 1px solid #334155; display: flex; flex-direction: column; }
+  .mcc-tp-card { background: rgba(15,23,42,.9); border: 1px solid rgba(6,182,212,.25); border-radius: 14px; width: 100%; max-width: 320px; display: flex; flex-direction: column; backdrop-filter: blur(12px); box-shadow: 0 0 40px rgba(6,182,212,.12), 0 20px 60px rgba(0,0,0,.5); }
+  .mcc-tp-avatar-lg { width: 34px; height: 34px; background: linear-gradient(135deg,#06b6d4,#3b82f6); border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 12px rgba(6,182,212,.4); }
+  .mcc-tp-orb { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, rgba(6,182,212,.2) 0%, transparent 70%); border-radius: 50%; animation: mcc-orb-pulse 3s ease-in-out infinite; }
+  @keyframes mcc-orb-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(6,182,212,.2); } 50% { box-shadow: 0 0 0 16px rgba(6,182,212,.0); } }
+  .mcc-tp-prompt-lg { width: 100%; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.75); font-size: .6rem; padding: .45rem .75rem; border-radius: 8px; cursor: pointer; text-align: left; transition: all .2s; }
+  .mcc-tp-prompt-lg:hover { background: rgba(6,182,212,.1); border-color: rgba(6,182,212,.3); }
+  .mcc-tp-header { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; border-bottom: 1px solid #334155; }
+  .mcc-tp-avatar { width: 28px; height: 28px; background: linear-gradient(135deg,#06b6d4,#3b82f6); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .8rem; }
+  .mcc-tp-bot-icon { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+  .mcc-tp-prompt { width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.7); font-size: .6rem; padding: .5rem .75rem; border-radius: 6px; cursor: pointer; text-align: left; }
+  .mcc-tp-input-row { padding: .6rem .75rem; border-top: 1px solid #334155; display: flex; gap: .5rem; margin-top: auto; }
+  .mcc-tp-input { flex: 1; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: #fff; font-size: .6rem; padding: .4rem .6rem; border-radius: 6px; }
+  .mcc-tp-send { background: #0d9488; border: none; color: #fff; font-size: .65rem; width: 28px; height: 28px; border-radius: 6px; cursor: pointer; }
+  .mcc-tp-pill { position: absolute; bottom: -36px; right: 0; background: linear-gradient(90deg,#0d9488,#06b6d4); color: #fff; font-size: .6rem; font-weight: 700; padding: .35rem 1rem; border-radius: 20px; white-space: nowrap; }
+  .mcc-strat-tab { font-size: .55rem; font-weight: 600; padding: .5rem .75rem; color: rgba(247,243,236,.4); cursor: pointer; border-bottom: 2px solid transparent; }
+  .mcc-strat-active { color: #3b82f6; border-bottom-color: #3b82f6; }
+  .mcc-commitment { display: flex; align-items: flex-start; gap: .5rem; padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.06); font-size: .65rem; color: #e2e8f0; line-height: 1.4; }
+  .mcc-commit-num { background: #0d9488; color: #fff; font-size: .45rem; font-weight: 800; width: 16px; height: 16px; border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: .05rem; }
+  .mcc-why-card { flex: 1; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 8px; padding: .75rem; text-align: center; }
+  .mcc-lead-stat { flex: 1; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: .5rem .65rem; min-width: 0; }
+  .mcc-lead-stat-label { font-size: .44rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .15rem; }
+  .mcc-lead-stat-num { font-size: 1.3rem; font-weight: 800; line-height: 1; margin-bottom: .1rem; color: rgba(247,243,236,.9); }
+  .mcc-lead-stat-sub { font-size: .45rem; color: rgba(247,243,236,.45); line-height: 1.3; }
+  .mcc-leads-table { width: 100%; border-collapse: collapse; font-size: .6rem; }
+  .mcc-leads-table th { font-size: .45rem; font-weight: 700; color: rgba(247,243,236,.4); letter-spacing: .08em; text-align: left; padding: .35rem .5rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .mcc-leads-table td { padding: .45rem .5rem; border-bottom: 1px solid rgba(255,255,255,.06); color: rgba(247,243,236,.8); vertical-align: middle; }
+  .mcc-leads-table tr:hover td { background: rgba(255,255,255,.05); }
+  .mcc-src-badge { font-size: .45rem; background: #dbeafe; color: #1d4ed8; padding: .1rem .4rem; border-radius: 10px; white-space: nowrap; }
+  .mcc-stage-badge { font-size: .45rem; padding: .12rem .4rem; border-radius: 10px; font-weight: 600; white-space: nowrap; }
+  .mcc-stage-sql { background: #fef9c3; color: #854d0e; }
+  .mcc-stage-mql { background: #dbeafe; color: #1d4ed8; }
+  .mcc-stage-mal { background: #f0fdf4; color: #15803d; }
+  .mcc-stage-customer { background: rgba(34,197,94,.18); color: #4ade80; border: 1px solid rgba(34,197,94,.3); }
+  </style>
+
+  <script>
+  function mccGetScale() {
+    var w = window.innerWidth;
+    if (w <= 390) return 0.38;
+    if (w <= 480) return 0.42;
+    if (w <= 680) return 0.55;
+    if (w <= 880) return 0.75;
+    return 1;
+  }
+
+  function mccUpdateMargin() {
+    var inner = document.querySelector('.mcc-scaler-inner');
+    if (!inner) return;
+    var scale = mccGetScale();
+    if (scale >= 1) { inner.style.marginBottom = ''; return; }
+    // Measure after layout settles
+    requestAnimationFrame(function() {
+      var h = inner.offsetHeight;
+      inner.style.marginBottom = '-' + Math.round(h * (1 - scale)) + 'px';
+    });
+  }
+
+  function mccSwitch(btn, screenId) {
+    document.querySelectorAll('.mcc-tab-btn').forEach(b => b.classList.remove('mcc-active'));
+    btn.classList.add('mcc-active');
+    document.querySelectorAll('.mcc-screen').forEach(s => { s.classList.add('mcc-hidden'); s.style.display = 'none'; });
+    var screen = document.getElementById(screenId);
+    screen.classList.remove('mcc-hidden');
+    screen.style.display = 'flex';
+    var urls = { 'mcc-s-dashboard': 'mcc.internal / dashboard', 'mcc-s-kpis': 'mcc.internal / kpis', 'mcc-s-campaigns': 'mcc.internal / campaigns', 'mcc-s-calendar': 'mcc.internal / calendar', 'mcc-s-social': 'mcc.internal / social', 'mcc-s-paid': 'mcc.internal / paid-placements', 'mcc-s-leads': 'mcc.internal / leads', 'mcc-s-truepro': 'mcc.internal / live-intelligence', 'mcc-s-strategy': 'mcc.internal / agentic-strategy' };
+    document.getElementById('mcc-url-display').textContent = urls[screenId] || 'mcc.internal';
+    mccUpdateMargin();
+  }
+
+  // Run on load and resize
+  window.addEventListener('load', mccUpdateMargin);
+  window.addEventListener('resize', mccUpdateMargin);
+  </script>
+
+
+
+  <!-- WHAT MAKES IT DIFFERENT -->
+  <section class="section section--white">
+    <div class="section-inner">
+      <div class="s-label">What Makes It Different</div>
+      <h2 class="section-title fade-in">Not another AI tool.<br>A connected system.</h2>
+      <div class="why-grid">
+        <div class="fade-in">
+          <div class="differentiator" style="background: var(--surface); border-left-color: var(--accent);">
+            <h4>It connects the entire workflow</h4>
+            <p>Unlike most AI tools that solve one problem at a time, this system connects campaign planning, content creation, performance reporting, and sales alignment into one coherent workspace.</p>
+          </div>
+          <div class="differentiator" style="background: var(--surface); border-left-color: var(--accent);">
+            <h4>It&rsquo;s built for marketers, not developers</h4>
+            <p>No code required. No IT dependency. The system is designed to be owned and operated by the marketing team, which means it actually gets used.</p>
+          </div>
+          <div class="differentiator" style="background: var(--surface); border-left-color: var(--accent);">
+            <h4>It learns the business</h4>
+            <p>Over time, the system builds a knowledge base of campaigns, results, messaging, and audience insights, so every new initiative benefits from everything that came before it.</p>
+          </div>
+        </div>
+        <div class="fade-in delay-1">
+          <div class="differentiator" style="background: var(--surface); border-left-color: var(--accent);">
+            <h4>It reduces coordination overhead</h4>
+            <p>Campaign updates, reporting, content briefs, and performance summaries that used to take hours now happen automatically, freeing the team to focus on strategy and creativity.</p>
+          </div>
+          <div class="differentiator" style="background: var(--surface); border-left-color: var(--accent);">
+            <h4>It makes AI a collaborator, not a shortcut</h4>
+            <p>The goal isn&rsquo;t to use AI to produce more content faster. It&rsquo;s to use AI to think more clearly, plan more strategically, and execute with more precision.</p>
+          </div>
+          <div class="differentiator" style="background: var(--surface); border-left-color: var(--accent);">
+            <h4>It&rsquo;s already producing results</h4>
+            <p>AI-powered workflows implemented at Syspro improved planning, reporting, content development, and campaign execution, contributing to measurable pipeline growth across the Americas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section class="section section--dark">
+    <div class="section-inner">
+      <div class="s-label">Why It Matters</div>
+      <h2 class="section-title fade-in" style="margin-bottom: 2rem;">The future of<br>marketing is already here.<br><span style="background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Most teams aren&rsquo;t in it.</span></h2>
+      <div class="intro-split fade-in delay-1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+        <div>
+          <p class="body-text" style="margin-bottom: 1.5rem;">Marketing teams that use AI strategically, not just for writing, will move faster, make better decisions, and focus more of their time on the work that actually moves the business forward.</p>
+          <p class="body-text" style="margin-bottom: 1.5rem;">The gap between teams that will use AI well and those that won&rsquo;t is widening fast. The tools exist. The question is whether you&rsquo;re building a system around them or just using them one prompt at a time.</p>
+        </div>
+        <div>
+          <p class="body-text" style="margin-bottom: 1.5rem;">This project is my answer to that question. It&rsquo;s not a side project or an experiment. It&rsquo;s a new way of running marketing that I&rsquo;ve been building, testing, and using in practice at Syspro.</p>
+          <p class="body-text">The next version of high-performing marketing isn&rsquo;t faster execution. It&rsquo;s smarter execution, with systems that learn, adapt, and compound over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI STATS -->
+  <div class="stats-bar">
+    <div class="stats-grid" style="max-width: 1240px; margin: 0 auto;">
+      <div class="stat fade-in">
+        <span class="stat-number">$15.5M+</span>
+        <span class="stat-label">Marketing-Sourced Pipeline</span>
+      </div>
+      <div class="stat fade-in delay-1">
+        <span class="stat-number">$6M+</span>
+        <span class="stat-label">Closed-Won Revenue Influenced</span>
+      </div>
+      <div class="stat fade-in delay-2">
+        <span class="stat-number">8</span>
+        <span class="stat-label">Integrated Modules in the Command Center</span>
+      </div>
+      <div class="stat fade-in delay-3">
+        <span class="stat-number">1</span>
+        <span class="stat-label">Connected Workspace. Zero Code Required.</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonial-section" style="background:#060b14;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:26px 26px;">
+    <div class="testimonial-carousel">
+      <div class="s-label" style="color:var(--accent);border-color:rgba(150,178,82,.3);background:rgba(150,178,82,.08);">What Others Say</div>
+      <div class="testimonial-track">
+        <div class="testimonial-slide">
+          <span class="t-mark">&ldquo;</span>
+          <p class="t-quote" style="color:rgba(245,242,235,.82);">Jessica is one of the hardest working people I&rsquo;ve worked with. She&rsquo;s able to manage complex, fast-moving work with precision and always delivers with real impact. She stays ahead of the curve on tools and AI, which made our team faster and more effective without sacrificing quality.</p>
+          <div class="t-name" style="color:var(--white);">Pat Bolin</div>
+          <div class="t-role" style="background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:.9;">GTM and Lead Qualification &middot; Syspro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- LET'S TALK -->
+  <section class="closing" style="background:#0a0a08;">
+    <div class="c
