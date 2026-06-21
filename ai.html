@@ -86,23 +86,27 @@
     .mcc-scaler {
       width: 100%;
       overflow: hidden;
+      padding-top: 28px; /* room for floating stat badges at top:-18px */
     }
     .mcc-scaler-inner {
       transform-origin: top left;
       width: 900px;
+      margin: 0 auto; /* center on desktop */
     }
+    /* On mobile: scale + translateX to keep centered.
+       Formula: translateX(50vw - (900 * scale / 2)px) */
     @media (max-width: 880px) {
-      .mcc-scaler-inner { transform: scale(0.75); width: 900px; margin-bottom: -225px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 337.5px)) scale(0.75); margin-bottom: -225px; }
     }
     @media (max-width: 680px) {
-      .mcc-scaler-inner { transform: scale(0.55); width: 900px; margin-bottom: -405px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 247.5px)) scale(0.55); margin-bottom: -405px; }
     }
     @media (max-width: 480px) {
-      .mcc-scaler { padding: 0 !important; }
-      .mcc-scaler-inner { transform: scale(0.42); width: 900px; margin-bottom: -522px; }
+      .mcc-scaler { padding: 28px 0 0 !important; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 189px)) scale(0.42); margin-bottom: -522px; }
     }
     @media (max-width: 390px) {
-      .mcc-scaler-inner { transform: scale(0.38); width: 900px; margin-bottom: -558px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 171px)) scale(0.38); margin-bottom: -558px; }
     }
 
     /* === FEATURE CALLOUT GRID: mobile stacking === */
