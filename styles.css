@@ -255,6 +255,47 @@ ul { list-style: none; }
     0 12px 40px rgba(0,0,0,.6),
     0 24px 60px rgba(0,0,0,.35);
 }
+/* ── EBOOK CARD ──────────────────────────────── */
+.ebook-card {
+  position: relative;
+  display: inline-block;
+  transform: rotate(-1.5deg);
+  transition: transform .35s cubic-bezier(.25,.46,.45,.94);
+}
+.ebook-card:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+.ebook-glow {
+  position: absolute;
+  inset: -28px;
+  background: radial-gradient(ellipse at center, rgba(150,178,82,.18) 0%, transparent 70%);
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+.ebook-card:hover .ebook-glow {
+  opacity: 1.8;
+  background: radial-gradient(ellipse at center, rgba(150,178,82,.32) 0%, transparent 65%);
+}
+.ebook-preview {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.5),
+    0 24px 60px rgba(0,0,0,.5),
+    0 40px 80px rgba(0,0,0,.3);
+  transition: box-shadow .35s ease;
+}
+.ebook-card:hover .ebook-preview {
+  box-shadow:
+    0 12px 32px rgba(0,0,0,.6),
+    0 32px 80px rgba(0,0,0,.55),
+    0 0 60px rgba(150,178,82,.2),
+    0 0 120px rgba(150,178,82,.08);
+}
+
 .resume-dl-btn {
   display: inline-flex;
   align-items: center;
@@ -1618,43 +1659,4 @@ html.page-ready { opacity: 1; }
   margin-top: .3rem;
 }
 .t-dots {
-  display: flex;
-  justify-content: center;
-  gap: .55rem;
-  margin-top: 2.25rem;
-}
-.t-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.35);
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  transition: background .3s, transform .3s;
-}
-.t-dot.t-active {
-  background: #fff;
-  transform: scale(1.3);
-}
-
-/* ── COMPREHENSIVE MOBILE IMPROVEMENTS ──────── */
-@media (max-width: 768px) {
-  /* Nav */
-  .nav-inner { padding: 0 1rem; }
-  
-  /* Hero */
-  .hero { min-height: auto; padding: 5rem 1.5rem 3rem; }
-  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-resume { display: none; }
-  .hero-name { font-size: clamp(3.5rem, 14vw, 6rem); line-height: .88; }
-  .hero-label { font-size: .6rem; }
-  
-  /* Stats bar */
-  .stats-bar { padding: 2.5rem 1.5rem; }
-  .stats-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1rem; }
-  .stat-number { font-size: clamp(2rem, 8vw, 3.5rem); }
-  
-  /* About */
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .about-photo-frame { flex: none; height: 320px; width: 100%; }
-  .about-title-block h2 { font-size: clamp(2rem, 8vw, 3
+  display: fl
