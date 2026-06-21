@@ -85,7 +85,8 @@
     /* ── MCC REPLICA: scale down on mobile ── */
     .mcc-scaler {
       width: 100%;
-      overflow: hidden;
+      /* No overflow:hidden — JS handles margin dynamically per-screen height.
+         Section wrapper already clips horizontal overflow. */
       padding-top: 28px; /* room for floating stat badges at top:-18px */
     }
     .mcc-scaler-inner {
@@ -94,19 +95,20 @@
       margin: 0 auto; /* center on desktop */
     }
     /* On mobile: scale + translateX to keep centered.
-       Formula: translateX(50vw - (900 * scale / 2)px) */
+       Formula: translateX(50vw - (900 * scale / 2)px)
+       margin-bottom is set dynamically by JS to match actual screen height. */
     @media (max-width: 880px) {
-      .mcc-scaler-inner { transform: translateX(calc(50vw - 337.5px)) scale(0.75); margin-bottom: -225px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 337.5px)) scale(0.75); }
     }
     @media (max-width: 680px) {
-      .mcc-scaler-inner { transform: translateX(calc(50vw - 247.5px)) scale(0.55); margin-bottom: -405px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 247.5px)) scale(0.55); }
     }
     @media (max-width: 480px) {
       .mcc-scaler { padding: 28px 0 0 !important; }
-      .mcc-scaler-inner { transform: translateX(calc(50vw - 189px)) scale(0.42); margin-bottom: -522px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 189px)) scale(0.42); }
     }
     @media (max-width: 390px) {
-      .mcc-scaler-inner { transform: translateX(calc(50vw - 171px)) scale(0.38); margin-bottom: -558px; }
+      .mcc-scaler-inner { transform: translateX(calc(50vw - 171px)) scale(0.38); }
     }
 
     /* === FEATURE CALLOUT GRID: mobile stacking === */
@@ -1345,6 +1347,27 @@
   </style>
 
   <script>
+  function mccGetScale() {
+    var w = window.innerWidth;
+    if (w <= 390) return 0.38;
+    if (w <= 480) return 0.42;
+    if (w <= 680) return 0.55;
+    if (w <= 880) return 0.75;
+    return 1;
+  }
+
+  function mccUpdateMargin() {
+    var inner = document.querySelector('.mcc-scaler-inner');
+    if (!inner) return;
+    var scale = mccGetScale();
+    if (scale >= 1) { inner.style.marginBottom = ''; return; }
+    // Measure after layout settles
+    requestAnimationFrame(function() {
+      var h = inner.offsetHeight;
+      inner.style.marginBottom = '-' + Math.round(h * (1 - scale)) + 'px';
+    });
+  }
+
   function mccSwitch(btn, screenId) {
     document.querySelectorAll('.mcc-tab-btn').forEach(b => b.classList.remove('mcc-active'));
     btn.classList.add('mcc-active');
@@ -1354,7 +1377,12 @@
     screen.style.display = 'flex';
     var urls = { 'mcc-s-dashboard': 'mcc.internal / dashboard', 'mcc-s-kpis': 'mcc.internal / kpis', 'mcc-s-campaigns': 'mcc.internal / campaigns', 'mcc-s-calendar': 'mcc.internal / calendar', 'mcc-s-social': 'mcc.internal / social', 'mcc-s-paid': 'mcc.internal / paid-placements', 'mcc-s-leads': 'mcc.internal / leads', 'mcc-s-truepro': 'mcc.internal / live-intelligence', 'mcc-s-strategy': 'mcc.internal / agentic-strategy' };
     document.getElementById('mcc-url-display').textContent = urls[screenId] || 'mcc.internal';
+    mccUpdateMargin();
   }
+
+  // Run on load and resize
+  window.addEventListener('load', mccUpdateMargin);
+  window.addEventListener('resize', mccUpdateMargin);
   </script>
 
 
