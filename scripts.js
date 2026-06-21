@@ -183,3 +183,73 @@ const fadeObserver = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.fade-in').forEach(function(el) {
   fadeObserver.observe(el);
 })
+/* ── TESTIMONIAL CAROUSEL ────────────────────── */
+document.querySelectorAll('.testimonial-carousel').forEach(function(carousel) {
+  const slides = carousel.querySelectorAll('.testimonial-slide');
+  const dots   = carousel.querySelectorAll('.t-dot');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function goTo(n) {
+    slides[current].classList.remove('t-active');
+    if (dots[current]) dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('t-active');
+    if (dots[current]) dots[current].classList.add('active');
+  }
+
+  function startAuto() {
+    timer = setInterval(function() { goTo(current + 1); }, 5000);
+  }
+
+  goTo(0);
+  startAuto();
+
+  dots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() {
+      clearInterval(timer);
+      goTo(i);
+      startAuto();
+    });
+  });
+
+  var touchStartX = 0;
+  carousel.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  carousel.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 40) {
+      clearInterval(timer);
+      goTo(diff > 0 ? current + 1 : current - 1);
+      startAuto();
+    }
+  }, { passive: true });
+});
+
+/* ── MAGNETIC BUTTON EFFECT ──────────────────── */
+document.querySelectorAll('.btn').forEach(function(btn) {
+  btn.addEventListener('mousemove', function(e) {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width  / 2;
+    const y = e.clientY - rect.top  - rect.height / 2;
+    const strength = 0.3;
+    btn.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+    // Radial glow follows cursor
+    const px = ((e.clientX - rect.left) / rect.width)  * 100;
+    const py = ((e.clientY - rect.top)  / rect.height) * 100;
+    if (!btn.classList.contains('btn--ghost')) {
+      btn.style.backgroundImage =
+        `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,.22) 0%, transparent 65%),
+         linear-gradient(135deg, var(--accent), var(--gold))`;
+    }
+  });
+  btn.addEventListener('mouseleave', function() {
+    btn.style.transform = '';
+    if (!btn.classList.contains('btn--ghost')) {
+      btn.style.backgroundImage = '';
+    }
+  });
+});
