@@ -2,6 +2,32 @@
    JESSICA RUDNICKI | PORTFOLIO INTERACTIONS
    ═══════════════════════════════════════════════ */
 
+/* ── MOBILE NAV TOGGLE ───────────────────────── */
+(function() {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const open = menu.classList.toggle('open');
+    toggle.classList.toggle('nav-toggle--open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.classList.remove('open');
+      toggle.classList.remove('nav-toggle--open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      toggle.classList.remove('nav-toggle--open');
+    });
+  });
+})();
+
 /* ── PAGE TRANSITION FADE ────────────────────── */
 document.documentElement.classList.add('page-ready');
 

@@ -1499,6 +1499,21 @@ html.page-ready { opacity: 1; }
   .section { padding: 4rem var(--pad-h); }
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
+
+  /* ── COLUMN GRIDS: stack on mobile ── */
+  .col-grid--2,
+  .col-grid--3,
+  .col-grid--4 { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* ── CASE STUDY GRID: stack on mobile ── */
+  .case-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* ── WORK ITEMS: stack label above content ── */
+  .work-item { grid-template-columns: 1fr; gap: 1rem; padding: 1.75rem; }
+
+  /* ── INLINE 2-COL / 3-COL INTRO GRIDS ── */
+  .intro-split { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .approach-split { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
 }
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: 1fr 1fr; }

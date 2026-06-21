@@ -82,6 +82,38 @@
       .why-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     }
 
+    /* ── MCC REPLICA: scale down on mobile ── */
+    .mcc-scaler {
+      width: 100%;
+      overflow: hidden;
+    }
+    .mcc-scaler-inner {
+      transform-origin: top left;
+      width: 900px;
+    }
+    @media (max-width: 880px) {
+      .mcc-scaler-inner { transform: scale(0.75); width: 900px; margin-bottom: -225px; }
+    }
+    @media (max-width: 680px) {
+      .mcc-scaler-inner { transform: scale(0.55); width: 900px; margin-bottom: -405px; }
+    }
+    @media (max-width: 480px) {
+      .mcc-scaler-inner { transform: scale(0.42); width: 900px; margin-bottom: -522px; }
+    }
+
+    /* === FEATURE CALLOUT GRID: mobile stacking === */
+    .feature-callout-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+    }
+    @media (max-width: 768px) {
+      .feature-callout-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .feature-callout-grid { grid-template-columns: 1fr; }
+    }
+
     /* === AI PAGE GRADIENT THEME: blue → teal → lime === */
     .nav-links a.active,
     .nav-mobile a.active {
@@ -186,7 +218,7 @@
   <section class="section section--white">
     <div class="section-inner">
       <div class="s-label">The Origin</div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+      <div class="intro-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
         <div class="fade-in">
           <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">Why I built it.</h2>
           <p class="body-text" style="margin-top: 1rem;">I've always believed marketers should spend less time managing work and more time creating value. Most marketing teams spend enormous energy on coordination: tracking campaigns, chasing updates, moving data between tools, writing reports nobody reads, and sitting in meetings that could have been a dashboard.</p>
@@ -239,7 +271,7 @@
     </div>
 
     <!-- Browser frame -->
-    <div style="max-width:1180px;margin:0 auto;padding:0 2rem;">
+    <div class="mcc-scaler" style="max-width:1180px;margin:0 auto;padding:0 2rem;"><div class="mcc-scaler-inner">
       <!-- floating stat badges -->
       <div style="position:relative;">
         <div style="position:absolute;top:-18px;right:0;display:flex;gap:.6rem;z-index:10;">
@@ -1156,6 +1188,7 @@
 
 
       </div><!-- /mcc-frame --></div><!-- /gradient border --></div><!-- /frame wrap -->
+    </div><!-- /mcc-scaler-inner -->
       <div style="text-align:center;margin-top:1.75rem;display:flex;align-items:center;justify-content:center;">
         <div style="display:inline-flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:600;letter-spacing:.06em;border:1px solid rgba(250,204,21,.3);padding:.55rem 1.4rem;border-radius:30px;background:rgba(250,204,21,.07);box-shadow:0 0 24px rgba(250,204,21,.1),0 0 60px rgba(250,204,21,.04);backdrop-filter:blur(8px);">
           <span style="width:8px;height:8px;background:#facc15;border-radius:50%;display:inline-block;box-shadow:0 0 8px #facc15,0 0 16px rgba(250,204,21,.4);animation:mcc-pulse 1.8s infinite;flex-shrink:0;"></span>
@@ -1169,7 +1202,7 @@
 
     <!-- Feature callout cards -->
     <div class="section-inner" style="max-width: var(--max-w); margin: 3.5rem auto 0; padding: 0 2rem;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:linear-gradient(135deg,rgba(150,178,82,.2),rgba(59,130,246,.15),rgba(6,182,212,.2));border-radius:16px;overflow:hidden;box-shadow:0 0 60px rgba(59,130,246,.08);">
+      <div class="feature-callout-grid" style="background:linear-gradient(135deg,rgba(150,178,82,.2),rgba(59,130,246,.15),rgba(6,182,212,.2));border-radius:16px;overflow:hidden;box-shadow:0 0 60px rgba(59,130,246,.08);">
 
         <div class="fade-in" style="background:rgba(8,13,24,.95);padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:background .3s;" onmouseover="this.style.background='rgba(12,20,36,.98)'" onmouseout="this.style.background='rgba(8,13,24,.95)'">
           <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#96B252,transparent);"></div>
@@ -1362,7 +1395,7 @@
     <div class="section-inner">
       <div class="s-label">Why It Matters</div>
       <h2 class="section-title fade-in" style="margin-bottom: 2rem;">The future of<br>marketing is already here.<br><span style="background:linear-gradient(90deg,#3B82F6,#06B6D4,#84CC16);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Most teams aren&rsquo;t in it.</span></h2>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;" class="fade-in delay-1">
+      <div class="intro-split fade-in delay-1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
         <div>
           <p class="body-text" style="margin-bottom: 1.5rem;">Marketing teams that use AI strategically, not just for writing, will move faster, make better decisions, and focus more of their time on the work that actually moves the business forward.</p>
           <p class="body-text" style="margin-bottom: 1.5rem;">The gap between teams that will use AI well and those that won&rsquo;t is widening fast. The tools exist. The question is whether you&rsquo;re building a system around them or just using them one prompt at a time.</p>
@@ -1416,34 +1449,5 @@
   <section class="closing" style="background:#0a0a08;">
     <div class="closing-inner">
       <h2>LET'S<br><span>TALK.</span></h2>
-      <p class="closing-quote">&ldquo;The projects I enjoy most usually begin with someone saying, &lsquo;We&rsquo;ve never done this before.&rsquo;&rdquo;</p>
-      <p class="closing-sub">If you're building a marketing function that needs to move fast and prove impact, let's talk.</p>
-      <div class="btn-group">
-        <a href="mailto:jrudnicki13@gmail.com" class="btn">Get in Touch</a>
-        <button class="btn btn--ghost copy-email-btn" data-email="jrudnicki13@gmail.com">
-          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-right:.3rem;"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M3 11H2a1 1 0 01-1-1V2a1 1 0 011-1h8a1 1 0 011 1v1"/></svg>
-          Copy Email
-        </button>
-        <a href="https://www.linkedin.com/in/jessrudnicki" target="_blank" class="btn btn--ghost">LinkedIn</a>
-        <a href="images/Jessica_Rudnicki_Resume_2026.pdf" target="_blank" rel="noopener" class="btn btn--ghost">
-          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-right:.3rem;"><path d="M3 13h10M8 2v8M5 7l3 3 3-3"/></svg>
-          Resume
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const mobile = document.getElementById('navMobile');
-    toggle.addEventListener('click', () => mobile.classList.toggle('open'));
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-  </script>
-  <script src="scripts.js"></script>
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                     
+      <p class="closing-quote">The projects I enjoy most usually begin with someone saying, &ldquo;We&rsquo;ve never done this before.&rdquo;</p>
+ 
