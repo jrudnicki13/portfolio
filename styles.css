@@ -602,6 +602,56 @@ ul { list-style: none; }
   font-weight: 700;
   color: var(--black);
 }
+
+/* ── ABOUT: PULL QUOTE ───────────────────────── */
+.about-pull-quote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 0 0 2.25rem;
+}
+.about-pull-quote p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.5vw, 1.2rem) !important;
+  line-height: 1.75 !important;
+  color: #2a2a2a !important;
+  margin-bottom: 0 !important;
+}
+
+/* ── ABOUT: PILLAR CARDS ─────────────────────── */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0;
+}
+.about-pillar {
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 4px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.about-pillar:hover {
+  transform: translateY(-4px);
+  border-color: rgba(150,178,82,.35);
+  box-shadow: 0 12px 32px rgba(0,0,0,.2);
+}
+.about-pillar-label {
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .75rem;
+}
+.about-pillar p {
+  font-size: .82rem !important;
+  line-height: 1.7 !important;
+  color: rgba(247,243,236,.65) !important;
+  margin-bottom: 0 !important;
+}
+
 .identity-box {
   margin-top: 2.5rem;
   padding: 1.75rem 2rem;
@@ -1564,6 +1614,10 @@ html.page-ready { opacity: 1; }
   /* ── INLINE 2-COL / 3-COL INTRO GRIDS ── */
   .intro-split { grid-template-columns: 1fr !important; gap: 2rem !important; }
   .approach-split { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+
+  /* ── ABOUT PILLARS: stack on mobile ── */
+  .about-pillars { grid-template-columns: 1fr; gap: .75rem; }
+  .about-pull-quote { padding-left: 1rem; }
 }
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: 1fr 1fr; }
@@ -1659,4 +1713,82 @@ html.page-ready { opacity: 1; }
   margin-top: .3rem;
 }
 .t-dots {
-  display: fl
+  display: flex; gap: .55rem; justify-content: center; margin-top: 2rem;
+}
+.t-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.3);
+  border: none; cursor: pointer; padding: 0;
+  transition: background .25s, transform .2s;
+}
+.t-dot.active {
+  background: rgba(255,255,255,.9);
+  transform: scale(1.25);
+}
+
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE — EXTENDED
+   ═══════════════════════════════════════════════ */
+
+/* Stat grid: 4-col on desktop → 2-col on mobile */
+.stat-4-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0 3.5rem;
+}
+@media (max-width: 768px) {
+  .stat-4-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Testimonial quote size on mobile */
+  .t-quote { font-size: 1rem; line-height: 1.75; }
+  .testimonial-track { min-height: 240px; }
+
+  /* Phone gallery: snap scrolling on mobile */
+  .phone-gallery {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    justify-content: flex-start !important;
+  }
+  .phone-wrap {
+    scroll-snap-align: center;
+  }
+
+  /* ebook/spotlight card stacks already via intro-split, but fix gap */
+  .ebook-card { max-width: 100% !important; }
+
+  /* Section title font clamp for very small screens */
+  .section-title { font-size: clamp(1.8rem, 7vw, 3rem) !important; }
+
+  /* Closing section padding */
+  .closing h2 { font-size: clamp(3.5rem, 13vw, 7rem); }
+
+  /* Page hero stats row - wrap on mobile */
+  .page-stats-grid { 
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-4-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Closing h2 tighter on very small */
+  .closing h2 { font-size: clamp(2.8rem, 12vw, 5rem); }
+  .closing-inner { padding: 2.5rem 1.25rem; }
+  .closing-quote { font-size: .9rem; }
+  .closing-sub { font-size: .82rem; }
+
+  /* Nav logo smaller */
+  .nav-logo { font-size: 1rem; }
+
+  /* Work items narrower padding */
+  .work-item { padding: 1.25rem; }
+
+  /* Testimonial min-height expands for longer quotes */
+  .testimonial-track { min-height: 300px; }
+}
