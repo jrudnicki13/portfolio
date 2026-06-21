@@ -191,12 +191,21 @@
   <section class="section section--dark">
     <div class="section-inner">
 
+      <!-- Milestone callout -->
+      <div class="fade-in" style="background:linear-gradient(135deg,rgba(150,178,82,.15) 0%,rgba(150,178,82,.05) 100%);border:1px solid rgba(150,178,82,.3);border-radius:14px;padding:1.5rem 2rem;margin-bottom:3rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4vw,3.8rem);line-height:1;color:var(--accent);" class="stat-number">1K</div>
+        <div>
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem;">Registrations · Max Capacity Reached</div>
+          <div style="font-size:1rem;color:var(--white);font-weight:500;line-height:1.4;">The biggest webinar in Syspro&rsquo;s history. We hit the registration limit and had to turn people away.</div>
+        </div>
+      </div>
+
       <!-- Header -->
       <div class="s-label">Campaign Spotlight</div>
       <div class="intro-split fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:3.5rem;">
         <div>
           <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.05;color:var(--white);margin:.5rem 0 1rem;">Unlock Hidden Value:<br><span style="color:var(--accent);">18 Modules Hiding<br>in Plain Sight</span></h2>
-          <p class="body-text" style="color:rgba(247,243,236,.68);margin-bottom:1.5rem;">A full-funnel webinar campaign built to convert existing Syspro customers into active ERP users — proving that untapped product value is one of the most efficient pipelines a company already owns.</p>
+          <p class="body-text" style="color:rgba(247,243,236,.68);margin-bottom:1.5rem;">A full-funnel webinar campaign built to convert existing Syspro customers into active ERP users, proving that untapped product value is one of the most efficient pipelines a company already owns.</p>
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
             <span style="font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(150,178,82,.12);border:1px solid rgba(150,178,82,.25);color:rgba(150,178,82,.9);padding:.3rem .7rem;border-radius:100px;">Email</span>
             <span style="font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(150,178,82,.12);border:1px solid rgba(150,178,82,.25);color:rgba(150,178,82,.9);padding:.3rem .7rem;border-radius:100px;">Content</span>
@@ -231,7 +240,7 @@
         </div>
       </div>
 
-      <!-- Email gallery -->
+      <!-- Email gallery — full 7-email sequence -->
       <div class="s-label" style="margin-bottom:1.25rem;">The Email Sequence</div>
       <div style="display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:1.5rem;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;">
 
@@ -243,32 +252,80 @@
               <div class="ec-subject">Channel Partner Activation</div>
             </div>
             <div class="ec-body">
-              <img src="images/email-webinar-partner.png" alt="Partner activation email — Unlock 18 Hidden Syspro Modules"
+              <img src="images/email-webinar-partner.png" alt="Partner activation email"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div class="ec-placeholder" style="display:none;">email-webinar-partner.jpg</div>
+              <div class="ec-placeholder" style="display:none;">email-webinar-partner.png</div>
             </div>
           </div>
           <p class="ec-label">01 &middot; Partner Activation</p>
         </div>
 
-        <!-- Email 2: At capacity -->
+        <!-- Email 2: Invite -->
         <div class="ec-wrap fade-in delay-1" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
+          <div class="ec-frame">
+            <div class="ec-chrome">
+              <div class="ec-dot-row"><div class="ec-dot"></div><div class="ec-dot"></div><div class="ec-dot"></div></div>
+              <div class="ec-subject">Unlock 18 Hidden Syspro Modules</div>
+            </div>
+            <div class="ec-body">
+              <img src="images/email-webinar-invite.png" alt="Webinar invite email"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="ec-placeholder" style="display:none;">email-webinar-invite.png</div>
+            </div>
+          </div>
+          <p class="ec-label">02 &middot; Invite</p>
+        </div>
+
+        <!-- Email 3: 7-day reminder -->
+        <div class="ec-wrap fade-in delay-2" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
+          <div class="ec-frame">
+            <div class="ec-chrome">
+              <div class="ec-dot-row"><div class="ec-dot"></div><div class="ec-dot"></div><div class="ec-dot"></div></div>
+              <div class="ec-subject">18 Modules. 1 Week. Don&rsquo;t Miss This.</div>
+            </div>
+            <div class="ec-body">
+              <img src="images/email-webinar-7day.png" alt="7-day reminder email"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="ec-placeholder" style="display:none;">email-webinar-7day.png</div>
+            </div>
+          </div>
+          <p class="ec-label">03 &middot; 7-Day Reminder</p>
+        </div>
+
+        <!-- Email 4: 48-hour reminder -->
+        <div class="ec-wrap fade-in delay-3" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
+          <div class="ec-frame">
+            <div class="ec-chrome">
+              <div class="ec-dot-row"><div class="ec-dot"></div><div class="ec-dot"></div><div class="ec-dot"></div></div>
+              <div class="ec-subject">48 Hours: Last Chance to Register</div>
+            </div>
+            <div class="ec-body">
+              <img src="images/email-webinar-48hr.png" alt="48-hour reminder email"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="ec-placeholder" style="display:none;">email-webinar-48hr.png</div>
+            </div>
+          </div>
+          <p class="ec-label">04 &middot; 48-Hour Reminder</p>
+        </div>
+
+        <!-- Email 5: At capacity -->
+        <div class="ec-wrap fade-in" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
           <div class="ec-frame">
             <div class="ec-chrome">
               <div class="ec-dot-row"><div class="ec-dot"></div><div class="ec-dot"></div><div class="ec-dot"></div></div>
               <div class="ec-subject">We&rsquo;re Officially at Capacity</div>
             </div>
             <div class="ec-body">
-              <img src="images/email-webinar-capacity.png" alt="Officially at Capacity webinar email"
+              <img src="images/email-webinar-capacity.png" alt="Officially at Capacity email"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div class="ec-placeholder" style="display:none;">email-webinar-capacity.jpg</div>
+              <div class="ec-placeholder" style="display:none;">email-webinar-capacity.png</div>
             </div>
           </div>
-          <p class="ec-label">02 &middot; FOMO &amp; Waitlist</p>
+          <p class="ec-label">05 &middot; Sold Out</p>
         </div>
 
-        <!-- Email 3: Quick win post-event -->
-        <div class="ec-wrap fade-in delay-2" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
+        <!-- Email 6: Quick win post-event -->
+        <div class="ec-wrap fade-in delay-1" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
           <div class="ec-frame">
             <div class="ec-chrome">
               <div class="ec-dot-row"><div class="ec-dot"></div><div class="ec-dot"></div><div class="ec-dot"></div></div>
@@ -277,26 +334,26 @@
             <div class="ec-body">
               <img src="images/email-webinar-quickwin.png" alt="Choose Your Quick Win post-webinar email"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div class="ec-placeholder" style="display:none;">email-webinar-quickwin.jpg</div>
+              <div class="ec-placeholder" style="display:none;">email-webinar-quickwin.png</div>
             </div>
           </div>
-          <p class="ec-label">03 &middot; Post-Event Follow-Up</p>
+          <p class="ec-label">06 &middot; Post-Event Follow-Up</p>
         </div>
 
-        <!-- Email 4: Replay -->
-        <div class="ec-wrap fade-in delay-3" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
+        <!-- Email 7: Replay -->
+        <div class="ec-wrap fade-in delay-2" style="flex-shrink:0;width:240px;scroll-snap-align:start;">
           <div class="ec-frame">
             <div class="ec-chrome">
               <div class="ec-dot-row"><div class="ec-dot"></div><div class="ec-dot"></div><div class="ec-dot"></div></div>
-              <div class="ec-subject">You missed it &mdash; Watch today</div>
+              <div class="ec-subject">You missed it. Watch today.</div>
             </div>
             <div class="ec-body">
               <img src="images/email-webinar-replay.png" alt="Watch the recording replay email"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div class="ec-placeholder" style="display:none;">email-webinar-replay.jpg</div>
+              <div class="ec-placeholder" style="display:none;">email-webinar-replay.png</div>
             </div>
           </div>
-          <p class="ec-label">04 &middot; Replay &amp; On-Demand</p>
+          <p class="ec-label">07 &middot; Replay &amp; On-Demand</p>
         </div>
 
       </div>
